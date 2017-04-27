@@ -5,13 +5,13 @@
   
   <title>Android Studio 生成aar/jar并导入Android Studio工程中 | ZQiang94</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="aar&amp;amp;jaraar与jar不同，不像是jar里面只有class文件一样，还有so文件，资源文件和第三方库文件等等，其实就是一个压缩文件。 生成jar使用gradle task来生成一个jar文件在module的build.gradle文件中创建任务，如图：具体代码：12345678task makeJar(type: Copy) &amp;#123;    delete &apos;build/libs/">
+  <meta name="description" content="aar&amp;amp;jaraar与jar不同，不像是jar里面只有class文件一样，还有so文件，资源文件和第三方库文件等等，其实就是一个压缩文件。 生成jar使用gradle task来生成一个jar文件在module的build.gradle文件中创建任务，如图：">
 <meta name="keywords">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Android Studio 生成aar/jar并导入Android Studio工程中">
 <meta property="og:url" content="http://ZQiang94.github.io/2017/04/26/README8/index.html">
 <meta property="og:site_name" content="ZQiang94">
-<meta property="og:description" content="aar&amp;amp;jaraar与jar不同，不像是jar里面只有class文件一样，还有so文件，资源文件和第三方库文件等等，其实就是一个压缩文件。 生成jar使用gradle task来生成一个jar文件在module的build.gradle文件中创建任务，如图：具体代码：12345678task makeJar(type: Copy) &amp;#123;    delete &apos;build/libs/">
+<meta property="og:description" content="aar&amp;amp;jaraar与jar不同，不像是jar里面只有class文件一样，还有so文件，资源文件和第三方库文件等等，其实就是一个压缩文件。 生成jar使用gradle task来生成一个jar文件在module的build.gradle文件中创建任务，如图：">
 <meta property="og:image" content="http://zqiang94.github.io/assets/readme8/img0.png">
 <meta property="og:image" content="http://zqiang94.github.io/assets/readme8/img1.png">
 <meta property="og:image" content="http://zqiang94.github.io/assets/readme8/img2.png">
@@ -20,10 +20,10 @@
 <meta property="og:image" content="http://zqiang94.github.io/assets/readme8/img5.png">
 <meta property="og:image" content="http://zqiang94.github.io/assets/readme8/img6.png">
 <meta property="og:image" content="http://zqiang94.github.io/assets/readme8/img7.png">
-<meta property="og:updated_time" content="2017-04-27T02:30:04.169Z">
+<meta property="og:updated_time" content="2017-04-27T05:32:45.956Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android Studio 生成aar/jar并导入Android Studio工程中">
-<meta name="twitter:description" content="aar&amp;amp;jaraar与jar不同，不像是jar里面只有class文件一样，还有so文件，资源文件和第三方库文件等等，其实就是一个压缩文件。 生成jar使用gradle task来生成一个jar文件在module的build.gradle文件中创建任务，如图：具体代码：12345678task makeJar(type: Copy) &amp;#123;    delete &apos;build/libs/">
+<meta name="twitter:description" content="aar&amp;amp;jaraar与jar不同，不像是jar里面只有class文件一样，还有so文件，资源文件和第三方库文件等等，其实就是一个压缩文件。 生成jar使用gradle task来生成一个jar文件在module的build.gradle文件中创建任务，如图：">
 <meta name="twitter:image" content="http://zqiang94.github.io/assets/readme8/img0.png">
   
     <link rel="alternate" href="/atom.xml" title="ZQiang94" type="application/atom+xml">
@@ -102,8 +102,7 @@
         <!-- Table of Contents -->
         
         <h3 id="aar-amp-jar"><a href="#aar-amp-jar" class="headerlink" title="aar&amp;jar"></a>aar&amp;jar</h3><p>aar与jar不同，不像是jar里面只有class文件一样，还有so文件，资源文件和第三方库文件等等，其实就是一个压缩文件。</p>
-<h3 id="生成jar"><a href="#生成jar" class="headerlink" title="生成jar"></a>生成jar</h3><p>使用gradle task来生成一个jar文件<br>在module的build.gradle文件中创建任务，如图：<br><img src="/assets/readme8/img0.png" alt=""><br>具体代码：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">task makeJar(type: Copy) &#123;</div><div class="line">    <span class="keyword">delete</span> <span class="string">'build/libs/mysdk.jar'</span></div><div class="line">    <span class="keyword">from</span>(<span class="string">'build/intermediates/bundles/release/'</span>)</div><div class="line">    into(<span class="string">'build/libs/'</span>)</div><div class="line">    include(<span class="string">'classes.jar'</span>)</div><div class="line">    rename (<span class="string">'classes.jar'</span>, <span class="string">'mysdk.jar'</span>)</div><div class="line">&#125;</div><div class="line">makeJar.dependsOn(build)</div></pre></td></tr></table></figure></p>
-<a id="more"></a>
+<h3 id="生成jar"><a href="#生成jar" class="headerlink" title="生成jar"></a>生成jar</h3><p>使用gradle task来生成一个jar文件<br>在module的build.gradle文件中创建任务，如图：<br><a id="more"></a><br><img src="/assets/readme8/img0.png" alt=""><br>具体代码：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">task makeJar(type: Copy) &#123;</div><div class="line">    <span class="keyword">delete</span> <span class="string">'build/libs/mysdk.jar'</span></div><div class="line">    <span class="keyword">from</span>(<span class="string">'build/intermediates/bundles/release/'</span>)</div><div class="line">    into(<span class="string">'build/libs/'</span>)</div><div class="line">    include(<span class="string">'classes.jar'</span>)</div><div class="line">    rename (<span class="string">'classes.jar'</span>, <span class="string">'mysdk.jar'</span>)</div><div class="line">&#125;</div><div class="line">makeJar.dependsOn(build)</div></pre></td></tr></table></figure></p>
 <p>sync(同步)完之后，使用命令行或者使用可视化gradle task来执行上面创建的任务(makeJar)。<br>使用可视化任务列表更为可观<img src="/assets/readme8/img1.png" alt=""><img src="/assets/readme8/img2.png" alt=""><br>到build/libs/中查看生成的jar<br><img src="/assets/readme8/img3.png" alt=""><br>这个jar就是执行task之后生成的指定name的jar，可以直接使用。下面就是如何使用这个jar。</p>
 <h3 id="导入jar"><a href="#导入jar" class="headerlink" title="导入jar"></a>导入jar</h3><p>1.拷贝到工程的libs目录；<br>2.build.gradle中的依赖添加 compile files(‘libs/mysdk.jar’)。<br>使用可视化工具也可。<img src="/assets/readme8/img4.png" alt="Project Structure"></p>
 <h3 id="生成aar"><a href="#生成aar" class="headerlink" title="生成aar"></a>生成aar</h3><p>要生成 aar 文件，必须将 Module 配置为 library，在 gradle 文件中注明： apply plugin: ‘com.android.library’；如图：<br><img src="/assets/readme8/img5.png" alt=""><br>要想apply plugin为library，可以创建Android Library，也可以手动修改apply plugin:为library，一般采用前者方式。<br>sync之后，在outputs文件夹下会生成相应的aar文件，比jar的方式要简单，不需要创建任务。<br><img src="/assets/readme8/img6.png" alt=""></p>
@@ -114,7 +113,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://ZQiang94.github.io/2017/04/26/README8/" data-id="cj1zsee7s0007follpzoqodu7" class="article-share-link">分享</a>
+      <a data-url="http://ZQiang94.github.io/2017/04/26/README8/" data-id="cj1zztnwm0008ucll6w3lfw84" class="article-share-link">分享</a>
       
       
       
@@ -133,6 +132,11 @@
       </div>
     </a>
   
+  
+    <a href="/2017/04/27/README3/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">Java中回调接口的简单使用</div>
+    </a>
   
 </nav>
 

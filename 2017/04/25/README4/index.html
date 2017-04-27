@@ -5,20 +5,20 @@
   
   <title>Android多分辨率适配目录 | ZQiang94</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="多分辨率适配目录12345layout-large-mdpi   (1024x600)layout-large-tvdpi  (800x1280)layout-large-xhdpi  (1200x1920)layout-xlarge-mdpi  (1280x800)layout-xlarge-xhdpi (2560x1600) 或者直接使用下面这样：12layout-640x360layout-">
+  <meta name="description" content="多分辨率适配目录12345layout-large-mdpi   (1024x600)layout-large-tvdpi  (800x1280)layout-large-xhdpi  (1200x1920)layout-xlarge-mdpi  (1280x800)layout-xlarge-xhdpi (2560x1600)">
 <meta name="keywords">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Android多分辨率适配目录">
 <meta property="og:url" content="http://ZQiang94.github.io/2017/04/25/README4/index.html">
 <meta property="og:site_name" content="ZQiang94">
-<meta property="og:description" content="多分辨率适配目录12345layout-large-mdpi   (1024x600)layout-large-tvdpi  (800x1280)layout-large-xhdpi  (1200x1920)layout-xlarge-mdpi  (1280x800)layout-xlarge-xhdpi (2560x1600) 或者直接使用下面这样：12layout-640x360layout-">
+<meta property="og:description" content="多分辨率适配目录12345layout-large-mdpi   (1024x600)layout-large-tvdpi  (800x1280)layout-large-xhdpi  (1200x1920)layout-xlarge-mdpi  (1280x800)layout-xlarge-xhdpi (2560x1600)">
 <meta property="og:image" content="http://zqiang94.github.io/assets/readme4/img0.png">
 <meta property="og:image" content="http://zqiang94.github.io/assets/readme4/img1.png">
 <meta property="og:image" content="http://zqiang94.github.io/assets/readme4/img2.png">
-<meta property="og:updated_time" content="2017-04-27T03:07:30.728Z">
+<meta property="og:updated_time" content="2017-04-27T05:32:00.803Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android多分辨率适配目录">
-<meta name="twitter:description" content="多分辨率适配目录12345layout-large-mdpi   (1024x600)layout-large-tvdpi  (800x1280)layout-large-xhdpi  (1200x1920)layout-xlarge-mdpi  (1280x800)layout-xlarge-xhdpi (2560x1600) 或者直接使用下面这样：12layout-640x360layout-">
+<meta name="twitter:description" content="多分辨率适配目录12345layout-large-mdpi   (1024x600)layout-large-tvdpi  (800x1280)layout-large-xhdpi  (1200x1920)layout-xlarge-mdpi  (1280x800)layout-xlarge-xhdpi (2560x1600)">
 <meta name="twitter:image" content="http://zqiang94.github.io/assets/readme4/img0.png">
   
     <link rel="alternate" href="/atom.xml" title="ZQiang94" type="application/atom+xml">
@@ -97,9 +97,9 @@
         <!-- Table of Contents -->
         
         <h3 id="多分辨率适配目录"><a href="#多分辨率适配目录" class="headerlink" title="多分辨率适配目录"></a>多分辨率适配目录</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">layout-large-mdpi   (1024x600)</div><div class="line">layout-large-tvdpi  (800x1280)</div><div class="line">layout-large-xhdpi  (1200x1920)</div><div class="line">layout-xlarge-mdpi  (1280x800)</div><div class="line">layout-xlarge-xhdpi (2560x1600)</div></pre></td></tr></table></figure>
+<a id="more"></a>
 <p>或者直接使用下面这样：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">layout-640x360</div><div class="line">layout-800x480</div></pre></td></tr></table></figure></p>
 <p>与 layout 对应的，有不同的 drawable：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">res/drawable        (default)</div><div class="line">res/drawable-ldpi/  (240x320 and nearer resolution)</div><div class="line">res/drawable-mdpi/  (320x480 and nearer resolution)</div><div class="line">res/drawable-hdpi/  (480x800, 540x960 and nearer resolution)</div><div class="line">res/drawable-xhdpi/  (720x1280 - Samsung S3, Micromax Canvas HD etc)</div><div class="line">res/drawable-xxhdpi/ (1080x1920 - Samsung S4, HTC one, Nexus 5, etc)</div></pre></td></tr></table></figure></p>
-<a id="more"></a>
 <p>用不同的 layout 毕竟工作量巨大，我们的实践是用不同的 values 来对应同 layout 中的值，目录如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">res/values/dimens.xml(default)</div><div class="line">res/values-ldpi/dimens.xml   (240x320 and nearer resolution)</div><div class="line">res/values-mdpi/dimens.xml   (320x480 and nearer resolution)</div><div class="line">res/values-hdpi/dimens.xml   (480x800, 540x960 and nearer resolution)</div><div class="line">res/values-xhdpi/dimens.xml  (720x1280 - Samsung S3, Micromax Canvas HD, etc) </div><div class="line">res/values-xxhdpi/dimens.xml (1080x1920 - Samsung S4, HTC one, etc)</div><div class="line">res/values-large/dimens.xml  (480x800)</div><div class="line"></div><div class="line">res/values-large-mdpi/dimens.xml (600x1024)</div><div class="line">res/values-sw600dp/dimens.xml  (600x1024)</div><div class="line">res/values-sw720dp/dimens.xml  (800x1280)</div><div class="line">res/values-xlarge-xhdpi/dimens.xml (2560x1600 - Nexus 10<span class="string">")</span></div><div class="line">res/values-large-xhdpi/dimens.xml  (1200x1920 - Nexus 7"(latest))</div></pre></td></tr></table></figure></p>
 <p>有时必须要考虑到密度，如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">ldpi   120			dpi  0.75</div><div class="line">mdpi   160			dpi  1</div><div class="line">hdpi   240			dpi  1.5</div><div class="line">xhdpi  320			dpi  2</div></pre></td></tr></table></figure></p>
 <h3 id="获取设备屏幕信息"><a href="#获取设备屏幕信息" class="headerlink" title="获取设备屏幕信息"></a>获取设备屏幕信息</h3><p><img src="/assets/readme4/img0.png" alt=""><br>扫描二维码进行下载或者点击<a href="https://github.com/ZQiang94/DisplayInfo/releases" target="_blank" rel="external">下载</a></p>
@@ -117,7 +117,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://ZQiang94.github.io/2017/04/25/README4/" data-id="cj1zsee7e0002follf01jrtvl" class="article-share-link">分享</a>
+      <a data-url="http://ZQiang94.github.io/2017/04/25/README4/" data-id="cj1zztnw80004ucll3p4kvimo" class="article-share-link">分享</a>
       
       
       
