@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>设计模式-Builder | ZQiang94</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Builder 链式编程替代构造器静态工厂和构造器有个共同的局限性，就是它们都不能很好地拓展到大量的可选参数。对于这样有大量可选参数的类，如果使用构造函数的方式来构建这样的类（重叠构造器），就显得笨重。 还有一种方式应对有大量可选参数的类的方式，就是使用JavaBean的set方法来对每一个参数进行赋值，但是这种方式有一个比较大的缺陷就是因为构造过程被分到了几个调用中，在构造的过程中JavaBea">
+<meta name="keywords">
+<meta property="og:type" content="article">
+<meta property="og:title" content="设计模式-Builder">
+<meta property="og:url" content="http://ZQiang94.github.io/2017/04/26/README7/index.html">
+<meta property="og:site_name" content="ZQiang94">
+<meta property="og:description" content="Builder 链式编程替代构造器静态工厂和构造器有个共同的局限性，就是它们都不能很好地拓展到大量的可选参数。对于这样有大量可选参数的类，如果使用构造函数的方式来构建这样的类（重叠构造器），就显得笨重。 还有一种方式应对有大量可选参数的类的方式，就是使用JavaBean的set方法来对每一个参数进行赋值，但是这种方式有一个比较大的缺陷就是因为构造过程被分到了几个调用中，在构造的过程中JavaBea">
+<meta property="og:image" content="http://zqiang94.github.io/assets/readme7/img0.png">
+<meta property="og:image" content="http://zqiang94.github.io/assets/readme7/img1.png">
+<meta property="og:updated_time" content="2017-04-27T02:44:05.359Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="设计模式-Builder">
+<meta name="twitter:description" content="Builder 链式编程替代构造器静态工厂和构造器有个共同的局限性，就是它们都不能很好地拓展到大量的可选参数。对于这样有大量可选参数的类，如果使用构造函数的方式来构建这样的类（重叠构造器），就显得笨重。 还有一种方式应对有大量可选参数的类的方式，就是使用JavaBean的set方法来对每一个参数进行赋值，但是这种方式有一个比较大的缺陷就是因为构造过程被分到了几个调用中，在构造的过程中JavaBea">
+<meta name="twitter:image" content="http://zqiang94.github.io/assets/readme7/img0.png">
+  
+    <link rel="alternate" href="/atom.xml" title="ZQiang94" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    
+    <div id="header-inner" class="inner">
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://ZQiang94.github.io"></form>
+      </div>
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">首页</a>
+        
+          <a class="main-nav-link" href="/archives">归档</a>
+        
+          <a class="main-nav-link" href="/about">关于</a>
+        
+      </nav>
+      
+    </div>
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">ZQiang94</a>
+      </h1>
+      
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-README7" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/04/26/README7/" class="article-date">
+  <time datetime="2017-04-26T06:44:49.585Z" itemprop="datePublished">2017-04-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      设计模式-Builder
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Table of Contents -->
+        
+        <h3 id="Builder-链式编程替代构造器"><a href="#Builder-链式编程替代构造器" class="headerlink" title="Builder 链式编程替代构造器"></a><a href="http://coolview.github.io/2016/04/28/Effective-Java-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B002-%E9%81%87%E5%88%B0%E5%A4%9A%E4%B8%AA%E6%9E%84%E9%80%A0%E5%99%A8%E5%8F%82%E6%95%B0%E6%97%B6%E8%A6%81%E8%80%83%E8%99%91%E7%94%A8%E6%9E%84%E5%BB%BA%E5%99%A8/" target="_blank" rel="external">Builder 链式编程替代构造器</a></h3><p>静态工厂和构造器有个共同的局限性，就是它们都不能很好地拓展到大量的可选参数。<br>对于这样有大量可选参数的类，如果使用构造函数的方式来构建这样的类（重叠构造器），就显得笨重。</p>
+<p>还有一种方式应对有大量可选参数的类的方式，就是使用JavaBean的set方法来对每一个参数进行赋值，但是这种方式<br>有一个比较大的缺陷就是因为构造过程被分到了几个调用中，在构造的过程中JavaBean可能会处于不一致的状态。还有<br>一点需要程序员做的就是要确保这个类的线程安全。</p>
+<p>针对这种具有大量可选参数的类，我们可以使用builder模式。<br>Builder模式，既能保证像重叠构造器模式那样的安全性，也能保证像JavaBeans模式那么好的可读性。<br>不直接生成想要的对象，而是让客户端利用所有必要的参数调用构造器（或者静态工厂），得到一个Builder对象。<br>然后客户端在builder对象上调用类似于setter的方法，来设置每个相关的可选参数。最后，客户端调用无参的build方法来生成不可变的对象。<br>这个builder是他构建的类的静态成员类。</p>
+<a id="more"></a>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div></pre></td><td class="code"><pre><div class="line">public <span class="class"><span class="keyword">class</span> <span class="title">Student</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="comment">//必须的参数</span></div><div class="line">    private int age;</div><div class="line">    private Sex sex;</div><div class="line">    private <span class="built_in">String</span> name;</div><div class="line"></div><div class="line">    <span class="comment">//非必须的参数，有默认值</span></div><div class="line">    private <span class="built_in">String</span> hobby;</div><div class="line">    private boolean isSmokes;</div><div class="line"></div><div class="line">    public <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">Buidler</span></span>&#123;</div><div class="line">        <span class="comment">//必须的参数</span></div><div class="line">        private int age;</div><div class="line">        private Sex sex;</div><div class="line">        private <span class="built_in">String</span> name;</div><div class="line"></div><div class="line">        <span class="comment">//非必须的参数，有默认值</span></div><div class="line">        private <span class="built_in">String</span> hobby = <span class="string">"无"</span>;</div><div class="line">        private boolean isSmokes = <span class="literal">false</span>;</div><div class="line"></div><div class="line">        public Buidler(<span class="built_in">String</span> name, int age, Sex sex)&#123;</div><div class="line">            <span class="keyword">this</span>.name = name;</div><div class="line">            <span class="keyword">this</span>.age = age;</div><div class="line">            <span class="keyword">this</span>.sex = sex;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        public Buidler hobby(<span class="built_in">String</span> hobby)&#123;</div><div class="line">            <span class="keyword">this</span>.hobby = hobby;</div><div class="line">            <span class="keyword">return</span> <span class="keyword">this</span>;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        public Buidler isSmokes(boolean isSmokes)&#123;</div><div class="line">            <span class="keyword">this</span>.isSmokes = isSmokes;</div><div class="line">            <span class="keyword">return</span> <span class="keyword">this</span>;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        public Student builder()&#123;</div><div class="line">            <span class="keyword">return</span> <span class="keyword">new</span> Student(<span class="keyword">this</span>);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public Student(Buidler buidler)&#123;</div><div class="line">        name = buidler.name;</div><div class="line">        sex = buidler.sex;</div><div class="line">        age = buidler.age;</div><div class="line">        hobby = buidler.hobby;</div><div class="line">        isSmokes = buidler.isSmokes;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>编写代码的时候可能会有点繁琐，但是Android Studio中有提供Builder的方式：<br>创建类（成员变量与构造方法） – &gt;  在构造方法上右键  – &gt;  refactor  – &gt;  Replease Constructor with Builder…</p>
+<p><img src="/assets/readme7/img0.png" alt=""><br><img src="/assets/readme7/img1.png" alt=""></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://ZQiang94.github.io/2017/04/26/README7/" data-id="cj1zsee7p0006follst43szbm" class="article-share-link">分享</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/04/26/README6/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          Android gitignore
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/04/26/README8/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">Android Studio 生成aar/jar并导入Android Studio工程中</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+ 
+     
+  <div class="comments" id="comments">
+    
+     
+       
+      <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+    
+  </div>
+ 
+  
+
+</section>
+           
+    <aside id="sidebar">
+  
+    
+
+  
+    
+    <div class="widget-wrap">
+    
+      <div class="widget" id="toc-widget-fixed">
+      
+        <strong class="toc-title">文章目录</strong>
+        <div class="toc-widget-list">
+              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Builder-链式编程替代构造器"><span class="toc-number">1.</span> <span class="toc-text">Builder 链式编程替代构造器</span></a></li></ol>
+          </div>
+      </div>
+    </div>
+
+  
+    
+
+  
+    
+  
+    
+  
+    
+
+  
+    
+  
+    <!--微信公众号二维码-->
+
+
+  
+</aside>
+
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-left">
+      &copy; 2014 - 2017 ZQiang94&nbsp;|&nbsp;
+      主题 <a href="https://github.com/giscafer/hexo-theme-cafe/" target="_blank">Cafe</a>
+    </div>
+     <div id="footer-right">
+      联系方式&nbsp;|&nbsp;zhangqiang452608069@gmail.com
+    </div>
+  </div>
+</footer>
+ <script src="/jquery/jquery.min.js"></script>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/about" class="mobile-nav-link">关于</a>
+  
+</nav>
+    <img class="back-to-top-btn" src="/images/fly-to-top.png"/>
+<script>
+// Elevator script included on the page, already.
+window.onload = function() {
+  var elevator = new Elevator({
+    selector:'.back-to-top-btn',
+    element: document.querySelector('.back-to-top-btn'),
+    duration: 1000 // milliseconds
+  });
+}
+</script>
+      
+
+  
+    <script>
+      var cloudTieConfig = {
+        url: document.location.href, 
+        sourceId: "",
+        productKey: "e2fb4051c49842xxce669e634bc983f",
+        target: "cloud-tie-wrapper"
+      };
+    </script>
+    <script src="https://img1.ws.126.net/f2e/tie/yun/sdk/loader.js"></script>
+    
+
+  
+
+
+
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      })
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      })
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+ <script src="/js/is.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+<script src="/js/elevator.js"></script>
+  </div>
+</body>
+</html>

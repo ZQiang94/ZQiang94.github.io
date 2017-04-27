@@ -3,23 +3,23 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Git Common Cmds | Hexo</title>
+  <title>Git Common Cmds | ZQiang94</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="常用提交代码123456789git status //查看工作区相比于暂存区有改动的文件git diff //查看具体改动文件内容git add . /git add file某个文件 //将工作区的改动添加到暂存区git commit –m “desc 描述” //添加注释并将暂存区所有改动提交到当前分支git push origin HEAD:refs/for/develop //推送本">
 <meta name="keywords">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git Common Cmds">
-<meta property="og:url" content="http://yoursite.com/2017/04/24/README0/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:url" content="http://ZQiang94.github.io/2017/04/24/README0/index.html">
+<meta property="og:site_name" content="ZQiang94">
 <meta property="og:description" content="常用提交代码123456789git status //查看工作区相比于暂存区有改动的文件git diff //查看具体改动文件内容git add . /git add file某个文件 //将工作区的改动添加到暂存区git commit –m “desc 描述” //添加注释并将暂存区所有改动提交到当前分支git push origin HEAD:refs/for/develop //推送本">
 <meta property="og:image" content="https://dn-myg6wstv.qbox.me/fea7461e85aee80bbe96.png">
-<meta property="og:updated_time" content="2017-04-25T14:26:50.932Z">
+<meta property="og:updated_time" content="2017-04-27T03:08:21.577Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git Common Cmds">
 <meta name="twitter:description" content="常用提交代码123456789git status //查看工作区相比于暂存区有改动的文件git diff //查看具体改动文件内容git add . /git add file某个文件 //将工作区的改动添加到暂存区git commit –m “desc 描述” //添加注释并将暂存区所有改动提交到当前分支git push origin HEAD:refs/for/develop //推送本">
 <meta name="twitter:image" content="https://dn-myg6wstv.qbox.me/fea7461e85aee80bbe96.png">
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="ZQiang94" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -47,7 +47,7 @@
         <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://ZQiang94.github.io"></form>
       </div>
       <nav id="main-nav">
         <a id="main-nav-toggle" class="nav-icon"></a>
@@ -63,7 +63,7 @@
     </div>
     <div id="header-title" class="inner">
       <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
+        <a href="/" id="logo">ZQiang94</a>
       </h1>
       
     </div>
@@ -97,6 +97,7 @@
         <div align="center"><img src="https://dn-myg6wstv.qbox.me/fea7461e85aee80bbe96.png"></div>
 
 <h3 id="常用"><a href="#常用" class="headerlink" title="常用"></a>常用</h3><p>提交代码<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">git status //查看工作区相比于暂存区有改动的文件</div><div class="line"></div><div class="line">git diff //查看具体改动文件内容</div><div class="line"></div><div class="line">git add . /git add file某个文件 //将工作区的改动添加到暂存区</div><div class="line"></div><div class="line">git commit –m “desc 描述” //添加注释并将暂存区所有改动提交到当前分支</div><div class="line"></div><div class="line">git push origin HEAD:refs/<span class="keyword">for</span>/develop //推送本地develop分支到远程origin/develop分支</div></pre></td></tr></table></figure></p>
+<a id="more"></a>
 <p>重新打patch进行提交（修改上次提交的内容）<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">git add .</div><div class="line"></div><div class="line">git commit --amend //对上次提交做出修改</div><div class="line"></div><div class="line">git push origin HEAD:refs/<span class="keyword">for</span>/develop</div></pre></td></tr></table></figure></p>
 <p>场景：当本地代码已经有改动但是不能提交，又要修复一个紧急bug（目的是为了隐藏本地改动，修复bug并提交之后，将之前隐藏的本地改动显示出来）<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">git stash //将工作区修改的部分隐藏起来</div><div class="line"></div><div class="line">//修复紧急bug</div><div class="line"></div><div class="line">//提交流程执行完之后</div><div class="line"></div><div class="line">git stash pop //恢复之前隐藏的文件</div></pre></td></tr></table></figure></p>
 <p>tag命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">//创建tag</div><div class="line">git tag <span class="_">-a</span> tag-name -m <span class="string">"tag信息"</span></div><div class="line">//例如：git tag <span class="_">-a</span> 3.9.5_2016090901_release -m <span class="string">"修复登录bug"</span> </div><div class="line"></div><div class="line">//推送版本信息到远程仓库</div><div class="line">git push origin tag-name</div><div class="line">//例如：git push origin 3.9.5_2016090901_release</div></pre></td></tr></table></figure></p>
@@ -119,7 +120,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/04/24/README0/" data-id="cj1xnymun0001vglljusna8dx" class="article-share-link">分享</a>
+      <a data-url="http://ZQiang94.github.io/2017/04/24/README0/" data-id="cj1zsee750000follv99qodu6" class="article-share-link">分享</a>
       
       
       
@@ -203,7 +204,7 @@
   
   <div class="outer">
     <div id="footer-left">
-      &copy; 2014 - 2017 John Doe&nbsp;|&nbsp;
+      &copy; 2014 - 2017 ZQiang94&nbsp;|&nbsp;
       主题 <a href="https://github.com/giscafer/hexo-theme-cafe/" target="_blank">Cafe</a>
     </div>
      <div id="footer-right">
