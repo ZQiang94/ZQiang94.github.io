@@ -3,15 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>ZQiang94</title>
+  <title>Android空包签名 | ZQiang94</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="ZQiang94">
-<meta property="og:url" content="http://ZQiang94.github.io/404.html">
+  <meta name="description" content="空包签名搜狗、优亿等Android市场，上传应用需要提供一个与要上传的应用相同签名的空包。这个空包是相应官方市场提供的，下载好之后需要使用命令行进行签名。具命令如下：">
+<meta name="keywords">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android空包签名">
+<meta property="og:url" content="http://ZQiang94.github.io/2017/04/08/README5/index.html">
 <meta property="og:site_name" content="ZQiang94">
-<meta property="og:updated_time" content="2017-04-27T06:36:47.268Z">
+<meta property="og:description" content="空包签名搜狗、优亿等Android市场，上传应用需要提供一个与要上传的应用相同签名的空包。这个空包是相应官方市场提供的，下载好之后需要使用命令行进行签名。具命令如下：">
+<meta property="og:updated_time" content="2017-05-02T06:34:02.004Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ZQiang94">
+<meta name="twitter:title" content="Android空包签名">
+<meta name="twitter:description" content="空包签名搜狗、优亿等Android市场，上传应用需要提供一个与要上传的应用相同签名的空包。这个空包是相应官方市场提供的，下载好之后需要使用命令行进行签名。具命令如下：">
   
     <link rel="alternate" href="/atom.xml" title="ZQiang94" type="application/atom+xml">
   
@@ -64,27 +68,41 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="page-undefined" class="article article-type-page" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-README5" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/404.html" class="article-date">
-  <time datetime="2017-04-27T06:36:47.268Z" itemprop="datePublished">2017-04-27</time>
+    <a href="/2017/04/08/README5/" class="article-date">
+  <time datetime="2017-04-07T16:00:00.000Z" itemprop="datePublished">2017-04-08</time>
 </a>
     
   </div>
   <div class="article-inner">
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Android空包签名
+    </h1>
+  
+
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
         <!-- Table of Contents -->
         
-        <script type="text/javascript" src="//qzonestyle.gtimg.cn/qzone/hybrid/app/404/search_children.js" charset="utf-8"></script>
+        <h3 id="空包签名"><a href="#空包签名" class="headerlink" title="空包签名"></a>空包签名</h3><p>搜狗、优亿等Android市场，上传应用需要提供一个与要上传的应用相同签名的空包。这个空包是相应官方市场提供的，下载好之后需要使用命令行进行签名。<br>具命令如下：<br><a id="more"></a><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">jarsigner -verbose -keystore [keystorePath] -signedjar [apkOut] [apkIn] [alias]</div></pre></td></tr></table></figure></p>
+<p>jarsigner命令格式：-verbose输出详细信息 -keystore密钥库位置 -signedjar要生成的文件 要签名的文件 密钥库文件</p>
+<p>keystorePath参数代表keyStore的绝对路径，如D:\keystore</p>
+<p>apkOut参数代表签名后的apk路径，如D:\signed.apk</p>
+<p>apkin参数代表在腾讯应用中心下载的未签名apk，默认名称为unsign.apk</p>
+<p>alias参数代表签名用的alias名称（创建keyStore时所填写）</p>
 
-<script type="text/javascript" src="//qzonestyle.gtimg.cn/qzone/hybrid/app/404/search_children.js" charset="utf-8" homepageurl="https://zqiang94.github.io/" homepagename="GoBack To ZQiang94"></script>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://ZQiang94.github.io/404.html" data-id="cj2013f2v0000roll195l6sdy" class="article-share-link">Share</a>
+      <a data-url="http://ZQiang94.github.io/2017/04/08/README5/" data-id="cj2011x3k0005o0llve5jqzrb" class="article-share-link">Share</a>
       
       
       
@@ -92,6 +110,25 @@
   </div>
   
     
+<nav id="article-nav">
+  
+    <a href="/2017/04/04/README4/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Android多分辨率适配目录
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/04/10/README6/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Android gitignore</div>
+    </a>
+  
+</nav>
+
   
 </article>
  
@@ -114,42 +151,24 @@
 
   
     
-  
+    <div class="widget-wrap">
     
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title recent-posts">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2017/05/02/README14/">HTTP协议</a>
-          </li>
-        
-          <li>
-            <a href="/2017/05/01/README13/">js与native的交互</a>
-          </li>
-        
-          <li>
-            <a href="/2017/04/29/README12/">Exception-getDrawable java.lang.NoSuchMethodError</a>
-          </li>
-        
-          <li>
-            <a href="/2017/04/29/README11/">Exception-android.view.WindowLeaked</a>
-          </li>
-        
-          <li>
-            <a href="/2017/04/25/README10/">Exception-WebView.destroy() called while still attached</a>
-          </li>
-        
-      </ul>
+      <div class="widget" id="toc-widget-fixed">
+      
+        <strong class="toc-title">Content</strong>
+        <div class="toc-widget-list">
+              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#空包签名"><span class="toc-number">1.</span> <span class="toc-text">空包签名</span></a></li></ol>
+          </div>
+      </div>
     </div>
-  </div>
 
+  
+    
+
+  
+    
+  
+    
   
     
 

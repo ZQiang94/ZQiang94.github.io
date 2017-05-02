@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Exception-so库找不到 | ZQiang94</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="运行时异常：1java.lang.UnsatisfiedLinkError: dalvik.system.PathClassLoader[DexPathList[[zip file &quot;/data/app/com.test/base.apk&quot;],nativeLibraryDirectories=[/data/app/com.test /lib/arm64, /data/app/com.test /b">
+<meta name="keywords">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Exception-so库找不到">
+<meta property="og:url" content="http://ZQiang94.github.io/2017/04/20/README9/index.html">
+<meta property="og:site_name" content="ZQiang94">
+<meta property="og:description" content="运行时异常：1java.lang.UnsatisfiedLinkError: dalvik.system.PathClassLoader[DexPathList[[zip file &quot;/data/app/com.test/base.apk&quot;],nativeLibraryDirectories=[/data/app/com.test /lib/arm64, /data/app/com.test /b">
+<meta property="og:image" content="http://zqiang94.github.io/assets/readme9/img0.png">
+<meta property="og:updated_time" content="2017-05-02T06:33:11.005Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Exception-so库找不到">
+<meta name="twitter:description" content="运行时异常：1java.lang.UnsatisfiedLinkError: dalvik.system.PathClassLoader[DexPathList[[zip file &quot;/data/app/com.test/base.apk&quot;],nativeLibraryDirectories=[/data/app/com.test /lib/arm64, /data/app/com.test /b">
+<meta name="twitter:image" content="http://zqiang94.github.io/assets/readme9/img0.png">
+  
+    <link rel="alternate" href="/atom.xml" title="ZQiang94" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    
+    <div id="header-inner" class="inner">
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://ZQiang94.github.io"></form>
+      </div>
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">首页</a>
+        
+          <a class="main-nav-link" href="/archives">归档</a>
+        
+          <a class="main-nav-link" href="/about">关于</a>
+        
+      </nav>
+      
+    </div>
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">ZQiang94</a>
+      </h1>
+      
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-README9" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/04/20/README9/" class="article-date">
+  <time datetime="2017-04-19T16:00:00.000Z" itemprop="datePublished">2017-04-20</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Exception-so库找不到
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Table of Contents -->
+        
+        <h3 id="运行时异常："><a href="#运行时异常：" class="headerlink" title="运行时异常："></a>运行时异常：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">java.lang.UnsatisfiedLinkError: dalvik.system.PathClassLoader[DexPathList[[zip file <span class="string">"/data/app/com.test/base.apk"</span>],nativeLibraryDirectories=[/data/app/com.test /lib/arm64, /data/app/com.test /base.apk!/lib/arm64-v8a, /vendor/lib64, /system/lib64]]] couldn<span class="string">'t find "libBDVoiceRecognitionClient_MFE_V1.so"</span></div></pre></td></tr></table></figure>
+<p>这是在使用so库时，因为找不到，类似的有关so库找不到的问题还有如下图中异常信息</p>
+<a id="more"></a>
+<p><img src="/assets/readme9/img0.png" alt=""></p>
+<h3 id="cpu相关概念"><a href="#cpu相关概念" class="headerlink" title="cpu相关概念"></a>cpu相关概念</h3><h4 id="CPU类型"><a href="#CPU类型" class="headerlink" title="CPU类型"></a>CPU类型</h4><p>要解决类似问题，就要了解一下cpu相关的概念，如下。<br>Android设备的CPU类型，通常称为ABIs<br>1.armeabiv-v7a：第7代及以上的ARM处理器，2011年以后生产的大部分Android设备都用它；<br>2.arm64-v8a： 第8代、64位ARM处理器，很少设备，三星 Galaxy S6是其中之一。<br>3.armeabi: 第5代、第6代的ARM处理器，早期的手机用的比较多。<br>4.x86: 平板、模拟器用得比较多。<br>5.x86_64: 64位的平板。</p>
+<h4 id="arm64-v8a与armeabi关系："><a href="#arm64-v8a与armeabi关系：" class="headerlink" title="arm64-v8a与armeabi关系："></a>arm64-v8a与armeabi关系：</h4><p>arm64-v8a是可以向下兼容的，但前提是你的项目里面没有arm64-v8a的文件夹，如果你有两个文件夹armeabi和arm64-v8a，两个文件夹，armeabi里面有a.so 和 b.so,arm64-v8a里面只有a.so，那么arm64-v8a的手机在用到b的时候发现有arm64-v8a的文件夹，发现里面没有b.so，就报错了，所以这个时候删掉arm64-v8a文件夹，这个时候手机发现没有适配arm64-v8a，就会直接去找armeabi的so库，所以要么你别加arm64-v8a,要么armeabi里面有的so库，arm64-v8a里面也必须有<br>作者：green jim<br>链接：<a href="http://www.zhihu.com/question/36893314/answer/78467097" target="_blank" rel="external">http://www.zhihu.com/question/36893314/answer/78467097</a> </p>
+<h4 id="x86、armeabi-v7a与armeabi"><a href="#x86、armeabi-v7a与armeabi" class="headerlink" title="x86、armeabi-v7a与armeabi"></a>x86、armeabi-v7a与armeabi</h4><p>当一个应用安装在设备上，只有该设备支持的CPU架构对应的.so文件会被安装。在x86设备上，libs/x86目录中如果存在.so文件的话，会被安装，如果不存在，则会选择armeabi-v7a中的.so文件，如果也不存在，则选择armeabi目录中的.so文件</p>
+<h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><h4 id="选择armaebi目录"><a href="#选择armaebi目录" class="headerlink" title="选择armaebi目录"></a>选择armaebi目录</h4><p>根据上述armebi目录调用顺序和关系，<br>要么将各个目录都放入相应位数的so文件；<br>或者是删除某个目录，eg.arm64-v8a。</p>
+<h4 id="显示指定支持的ABIs"><a href="#显示指定支持的ABIs" class="headerlink" title="显示指定支持的ABIs"></a>显示指定支持的ABIs</h4><p>另外一种解决方案， 显示指定支持的ABIs。</p>
+<p>android{<br>     defaultConfig {<br>             ndk { abiFilters “armeabi”, “armeabi-v7a”  }<br>     }<br>}<br>这种强制使用指定ABIs的方式暂时不推荐，因为不同cpu读取适合自己的.so库，有助于计算速度的提升。强制cpu使用上述目录下的so库，有可能造成性能上的损耗，但能解决该异常。</p>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="http://blog.csdn.net/ouyang_peng/article/details/51168072" target="_blank" rel="external">http://blog.csdn.net/ouyang_peng/article/details/51168072</a><br>google DOC：<a href="https://developer.android.com/ndk/guides/abis.html?hl=zh-cn" target="_blank" rel="external">https://developer.android.com/ndk/guides/abis.html?hl=zh-cn</a></p>
+<p>有关so文件还有很多东西，自行查阅，未完待续….</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://ZQiang94.github.io/2017/04/20/README9/" data-id="cj203ccp8000308llmw4o13fa" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/04/15/README8/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Android Studio 生成aar/jar并导入Android Studio工程中
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/04/25/README10/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Exception-WebView.destroy() called while still attached</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+ 
+     
+  <div class="comments" id="comments">
+    
+     
+       
+      <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+    
+  </div>
+ 
+  
+
+</section>
+           
+    <aside id="sidebar">
+  
+    
+
+  
+    
+    <div class="widget-wrap">
+    
+      <div class="widget" id="toc-widget-fixed">
+      
+        <strong class="toc-title">Content</strong>
+        <div class="toc-widget-list">
+              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#运行时异常："><span class="toc-number">1.</span> <span class="toc-text">运行时异常：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cpu相关概念"><span class="toc-number">2.</span> <span class="toc-text">cpu相关概念</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#CPU类型"><span class="toc-number">2.1.</span> <span class="toc-text">CPU类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#arm64-v8a与armeabi关系："><span class="toc-number">2.2.</span> <span class="toc-text">arm64-v8a与armeabi关系：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#x86、armeabi-v7a与armeabi"><span class="toc-number">2.3.</span> <span class="toc-text">x86、armeabi-v7a与armeabi</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#解决方案"><span class="toc-number">3.</span> <span class="toc-text">解决方案</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#选择armaebi目录"><span class="toc-number">3.1.</span> <span class="toc-text">选择armaebi目录</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#显示指定支持的ABIs"><span class="toc-number">3.2.</span> <span class="toc-text">显示指定支持的ABIs</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参考"><span class="toc-number">4.</span> <span class="toc-text">参考</span></a></li></ol>
+          </div>
+      </div>
+    </div>
+
+  
+    
+
+  
+    
+  
+    
+  
+    
+
+  
+    
+  
+    <!--微信公众号二维码-->
+
+
+  
+</aside>
+
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-left">
+      &copy; 2014 - 2017 ZQiang94&nbsp;|&nbsp;
+      Theme by <a href="https://github.com/giscafer/hexo-theme-cafe/" target="_blank">Cafe</a>
+    </div>
+     <div id="footer-right">
+      Contact&nbsp;|&nbsp;zhangqiang452608069@gmail.com
+    </div>
+  </div>
+</footer>
+ <script src="/jquery/jquery.min.js"></script>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/about" class="mobile-nav-link">关于</a>
+  
+</nav>
+    <img class="back-to-top-btn" src="/images/fly-to-top.png"/>
+<script>
+// Elevator script included on the page, already.
+window.onload = function() {
+  var elevator = new Elevator({
+    selector:'.back-to-top-btn',
+    element: document.querySelector('.back-to-top-btn'),
+    duration: 1000 // milliseconds
+  });
+}
+</script>
+      
+
+  
+    <script>
+      var cloudTieConfig = {
+        url: document.location.href, 
+        sourceId: "",
+        productKey: "e2fb4051c49842xxce669e634bc983f",
+        target: "cloud-tie-wrapper"
+      };
+    </script>
+    <script src="https://img1.ws.126.net/f2e/tie/yun/sdk/loader.js"></script>
+    
+
+  
+
+
+
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      })
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      })
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+ <script src="/js/is.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+<script src="/js/elevator.js"></script>
+  </div>
+</body>
+</html>

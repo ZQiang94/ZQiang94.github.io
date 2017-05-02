@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Android gitignore | ZQiang94</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Android常用的gitignore">
+<meta name="keywords">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android gitignore">
+<meta property="og:url" content="http://ZQiang94.github.io/2017/04/10/README6/index.html">
+<meta property="og:site_name" content="ZQiang94">
+<meta property="og:description" content="Android常用的gitignore">
+<meta property="og:updated_time" content="2017-05-02T06:33:52.500Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Android gitignore">
+<meta name="twitter:description" content="Android常用的gitignore">
+  
+    <link rel="alternate" href="/atom.xml" title="ZQiang94" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    
+    <div id="header-inner" class="inner">
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://ZQiang94.github.io"></form>
+      </div>
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">首页</a>
+        
+          <a class="main-nav-link" href="/archives">归档</a>
+        
+          <a class="main-nav-link" href="/about">关于</a>
+        
+      </nav>
+      
+    </div>
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">ZQiang94</a>
+      </h1>
+      
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-README6" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/04/10/README6/" class="article-date">
+  <time datetime="2017-04-09T16:00:00.000Z" itemprop="datePublished">2017-04-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Android gitignore
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Table of Contents -->
+        
+        <p>Android常用的gitignore</p>
+<a id="more"></a>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Built application files</span></div><div class="line">*.apk</div><div class="line">*.ap_</div><div class="line"></div><div class="line"><span class="comment"># Files for the ART/Dalvik VM</span></div><div class="line">*.dex</div><div class="line"></div><div class="line"><span class="comment"># Java class files</span></div><div class="line">*.class</div><div class="line"></div><div class="line"><span class="comment"># Generated files</span></div><div class="line">bin/</div><div class="line">gen/</div><div class="line">out/</div><div class="line"></div><div class="line"><span class="comment"># Gradle files</span></div><div class="line">.gradle/</div><div class="line">build/</div><div class="line"></div><div class="line"><span class="comment"># Local configuration file (sdk path, etc)</span></div><div class="line">local.properties</div><div class="line"></div><div class="line"><span class="comment"># Proguard folder generated by Eclipse</span></div><div class="line">proguard/</div><div class="line"></div><div class="line"><span class="comment"># Log Files</span></div><div class="line">*.log</div><div class="line"></div><div class="line"><span class="comment"># Android Studio Navigation editor temp files</span></div><div class="line">.navigation/</div><div class="line"></div><div class="line"><span class="comment"># Android Studio captures folder</span></div><div class="line">captures/</div><div class="line"></div><div class="line"><span class="comment"># Intellij</span></div><div class="line">*.iml</div><div class="line">.idea/workspace.xml</div><div class="line">.idea/tasks.xml</div><div class="line">.idea/gradle.xml</div><div class="line">.idea/dictionaries</div><div class="line">.idea/libraries</div><div class="line"></div><div class="line"><span class="comment"># Keystore files</span></div><div class="line">*.jks</div><div class="line"></div><div class="line"><span class="comment"># External native build folder generated in Android Studio 2.2 and later</span></div><div class="line">.externalNativeBuild</div><div class="line"></div><div class="line"><span class="comment"># Google Services (e.g. APIs or Firebase)</span></div><div class="line">google-services.json</div><div class="line"></div><div class="line"><span class="comment"># Freeline</span></div><div class="line">freeline.py</div><div class="line">freeline/</div><div class="line">freeline_project_description.json</div></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://ZQiang94.github.io/2017/04/10/README6/" data-id="cj2011x3p0006o0llke1qic4t" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/04/08/README5/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Android空包签名
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/04/10/README7/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">设计模式-Builder</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+ 
+     
+  <div class="comments" id="comments">
+    
+     
+       
+      <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+    
+  </div>
+ 
+  
+
+</section>
+           
+    <aside id="sidebar">
+  
+    
+
+  
+    
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title recent-posts">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/05/02/README14/">HTTP协议</a>
+          </li>
+        
+          <li>
+            <a href="/2017/05/01/README13/">js与native的交互</a>
+          </li>
+        
+          <li>
+            <a href="/2017/04/29/README12/">Exception-getDrawable java.lang.NoSuchMethodError</a>
+          </li>
+        
+          <li>
+            <a href="/2017/04/29/README11/">Exception-android.view.WindowLeaked</a>
+          </li>
+        
+          <li>
+            <a href="/2017/04/25/README10/">Exception-WebView.destroy() called while still attached</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+
+  
+    
+  
+    <!--微信公众号二维码-->
+
+
+  
+</aside>
+
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-left">
+      &copy; 2014 - 2017 ZQiang94&nbsp;|&nbsp;
+      Theme by <a href="https://github.com/giscafer/hexo-theme-cafe/" target="_blank">Cafe</a>
+    </div>
+     <div id="footer-right">
+      Contact&nbsp;|&nbsp;zhangqiang452608069@gmail.com
+    </div>
+  </div>
+</footer>
+ <script src="/jquery/jquery.min.js"></script>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/about" class="mobile-nav-link">关于</a>
+  
+</nav>
+    <img class="back-to-top-btn" src="/images/fly-to-top.png"/>
+<script>
+// Elevator script included on the page, already.
+window.onload = function() {
+  var elevator = new Elevator({
+    selector:'.back-to-top-btn',
+    element: document.querySelector('.back-to-top-btn'),
+    duration: 1000 // milliseconds
+  });
+}
+</script>
+      
+
+  
+    <script>
+      var cloudTieConfig = {
+        url: document.location.href, 
+        sourceId: "",
+        productKey: "e2fb4051c49842xxce669e634bc983f",
+        target: "cloud-tie-wrapper"
+      };
+    </script>
+    <script src="https://img1.ws.126.net/f2e/tie/yun/sdk/loader.js"></script>
+    
+
+  
+
+
+
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      })
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      })
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+ <script src="/js/is.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+<script src="/js/elevator.js"></script>
+  </div>
+</body>
+</html>

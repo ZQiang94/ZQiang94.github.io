@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>js与native的交互 | ZQiang94</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="概述目前所常用的native与js交互有两种方式，分别为 下面提到的方法1与方法2，这两种方式各有利弊，在4.2之前使用方法1存在安全问题，类似与sql的注入漏洞，这是运行时虚拟机的漏洞，暂且这样理解吧。另外无论哪种方式，都要与页面开发人员定要协议。">
+<meta name="keywords">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js与native的交互">
+<meta property="og:url" content="http://ZQiang94.github.io/2017/05/01/README13/index.html">
+<meta property="og:site_name" content="ZQiang94">
+<meta property="og:description" content="概述目前所常用的native与js交互有两种方式，分别为 下面提到的方法1与方法2，这两种方式各有利弊，在4.2之前使用方法1存在安全问题，类似与sql的注入漏洞，这是运行时虚拟机的漏洞，暂且这样理解吧。另外无论哪种方式，都要与页面开发人员定要协议。">
+<meta property="og:image" content="http://zqiang94.github.io/assets/readme13/img0.gif">
+<meta property="og:image" content="http://zqiang94.github.io/assets/readme13/img1.png">
+<meta property="og:updated_time" content="2017-05-02T06:31:56.718Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="js与native的交互">
+<meta name="twitter:description" content="概述目前所常用的native与js交互有两种方式，分别为 下面提到的方法1与方法2，这两种方式各有利弊，在4.2之前使用方法1存在安全问题，类似与sql的注入漏洞，这是运行时虚拟机的漏洞，暂且这样理解吧。另外无论哪种方式，都要与页面开发人员定要协议。">
+<meta name="twitter:image" content="http://zqiang94.github.io/assets/readme13/img0.gif">
+  
+    <link rel="alternate" href="/atom.xml" title="ZQiang94" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    
+    <div id="header-inner" class="inner">
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://ZQiang94.github.io"></form>
+      </div>
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">首页</a>
+        
+          <a class="main-nav-link" href="/archives">归档</a>
+        
+          <a class="main-nav-link" href="/about">关于</a>
+        
+      </nav>
+      
+    </div>
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">ZQiang94</a>
+      </h1>
+      
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-README13" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/05/01/README13/" class="article-date">
+  <time datetime="2017-04-30T16:00:00.000Z" itemprop="datePublished">2017-05-01</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      js与native的交互
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Table of Contents -->
+        
+        <h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>目前所常用的native与js交互有两种方式，分别为 下面提到的方法1与方法2，这两种方式各有利弊，在4.2之前使用方法1存在安全问题，<br>类似与sql的注入漏洞，这是运行时虚拟机的漏洞，暂且这样理解吧。另外无论哪种方式，都要与页面开发人员定要协议。</p>
+<a id="more"></a>
+<h3 id="sample运行效果图"><a href="#sample运行效果图" class="headerlink" title="sample运行效果图"></a>sample运行效果图</h3><p><img src="/assets/readme13/img0.gif" alt="运行效果图"></p>
+<h3 id="方法1-webClient-loadUrl-："><a href="#方法1-webClient-loadUrl-：" class="headerlink" title="方法1(webClient.loadUrl())："></a>方法1(webClient.loadUrl())：</h3><p>native:加载web页面并进行相关setting;<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">mWebView = (WebView) findViewById(R.id.webview);</div><div class="line"><span class="comment">//支持JavaScript脚本</span></div><div class="line">mWebView.getSettings().setJavaScriptEnabled(<span class="literal">true</span>);</div><div class="line"><span class="comment">// 加载html</span></div><div class="line">mWebView.loadUrl(<span class="string">"file:///android_asset/web.html"</span>);</div><div class="line"><span class="comment">//android为flag</span></div><div class="line">mWebView.addJavascriptInterface(MainActivity.this, <span class="string">"android"</span>);</div></pre></td></tr></table></figure></p>
+<p>native中调用（带参&amp;不带参）js方法实现<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//调用js函数</span></div><div class="line">       findViewById(R.id.button).setOnClickListener(<span class="keyword">new</span> View.OnClickListener() &#123;</div><div class="line">           @Override</div><div class="line">           public <span class="keyword">void</span> onClick(View v) &#123;</div><div class="line">               mWebView.loadUrl(<span class="string">"javascript:javaCallJs()"</span>);</div><div class="line">           &#125;</div><div class="line">       &#125;);</div><div class="line">       <span class="comment">//调用js函数并携带参数</span></div><div class="line">       final <span class="built_in">String</span> param = <span class="string">"'这是参数，注意这个参数的格式'"</span>;</div><div class="line">       findViewById(R.id.button2).setOnClickListener(<span class="keyword">new</span> View.OnClickListener() &#123;</div><div class="line">           @Override</div><div class="line">           public <span class="keyword">void</span> onClick(View v) &#123;</div><div class="line">               <span class="comment">// 传递参数调用</span></div><div class="line">               mWebView.loadUrl(<span class="string">"javascript:javaCallJswithParam("</span> + param + <span class="string">")"</span>);</div><div class="line">           &#125;</div><div class="line">       &#125;);</div></pre></td></tr></table></figure></p>
+<p><img src="/assets/readme13/img1.png" alt="运行效果图"></p>
+<p>js响应native方法实现：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</div><div class="line"></div><div class="line">       <span class="function"><span class="keyword">function</span> <span class="title">javaCallJs</span>(<span class="params"></span>)</span>&#123;</div><div class="line">       	 <span class="built_in">document</span>.getElementById(<span class="string">"content"</span>).innerHTML =<span class="string">"&lt;br\&gt;JAVA调用了JS的无参函数"</span>;</div><div class="line">       &#125;</div><div class="line"></div><div class="line">       <span class="function"><span class="keyword">function</span> <span class="title">javaCallJswithParam</span>(<span class="params">arg</span>)</span>&#123;</div><div class="line">       	 <span class="built_in">document</span>.getElementById(<span class="string">"content"</span>).innerHTML =</div><div class="line">       	 (<span class="string">"&lt;br\&gt;"</span>+arg);</div><div class="line">       &#125;</div><div class="line"></div><div class="line"> &lt;<span class="regexp">/script&gt;</span></div></pre></td></tr></table></figure></p>
+<p>web页面中，调用native方法具体实现<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;input type=<span class="string">"button"</span> value=<span class="string">"调用native方法"</span></div><div class="line">       onclick=<span class="string">"window.android.startFunction()"</span>/&gt;</div><div class="line"></div><div class="line">&lt;input type="button" value="调用native方法并传参"</div><div class="line">       onclick="window.android.startFunction('native方法被js调用，并传参')"/&gt;</div></pre></td></tr></table></figure></p>
+<p>native中，被调用的方法实现<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//由于安全原因 需要加 @JavascriptInterface</span></div><div class="line">@JavascriptInterface</div><div class="line">public <span class="keyword">void</span> startFunction() &#123;</div><div class="line">    runOnUiThread(<span class="keyword">new</span> Runnable() &#123;</div><div class="line">        @Override</div><div class="line">        public <span class="keyword">void</span> run() &#123;</div><div class="line">            <span class="keyword">new</span> AlertDialog.Builder(MainActivity.this).setMessage(<span class="string">"native方法触发"</span>).show();</div><div class="line">        &#125;</div><div class="line">    &#125;);</div><div class="line">&#125;</div><div class="line">@JavascriptInterface</div><div class="line">public <span class="keyword">void</span> startFunction(final <span class="built_in">String</span> text) &#123;</div><div class="line">    runOnUiThread(<span class="keyword">new</span> Runnable() &#123;</div><div class="line">        @Override</div><div class="line">        public <span class="keyword">void</span> run() &#123;</div><div class="line">            <span class="keyword">new</span> AlertDialog.Builder(MainActivity.this).setMessage(text).show();</div><div class="line">        &#125;</div><div class="line">    &#125;);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>@JavascriptInterface<br>上段备注中提到“由于安全原因需要加@JavascriptInterface”，是指在4.2版本之前的addjavascriptInterface接口引起的漏洞，可能导致恶意网页通过Js方法遍历刚刚通过addjavascriptInterface注入进来的类的所有方法从中获取到getClass方法，然后通过反射获取到Runtime对象，进而调用Runtime对象的exec方法执行一些操作，恶意的Js代码如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">execute</span>(<span class="params">args</span>) </span>&#123;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> obj <span class="keyword">in</span> <span class="built_in">window</span>) &#123;</div><div class="line">        <span class="keyword">if</span> (<span class="string">"getClass"</span> <span class="keyword">in</span> <span class="built_in">window</span>[obj]) &#123;</div><div class="line">            alert(obj);</div><div class="line">            <span class="keyword">return</span>  <span class="built_in">window</span>[obj].getClass().forName(<span class="string">"java.lang.Runtime"</span>)</div><div class="line">                 .getMethod(<span class="string">"getRuntime"</span>,<span class="literal">null</span>).invoke(<span class="literal">null</span>,<span class="literal">null</span>).exec(args);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>在Android API Level 17（Android 4.2）之后，可以通过添加@JavascriptInterface这个注解来避免该漏洞，在4.1及之前可以使用方法2<br>实现native与js之间的交互。</p>
+<h3 id="方法2-onAlert类似实现"><a href="#方法2-onAlert类似实现" class="headerlink" title="方法2 onAlert类似实现"></a>方法2 onAlert类似实现</h3><p>prompt()$onJsPrompt()/confirm()$onConfirm()/alert()$onAlert()：</p>
+<p>继承WebChromeClient<br>继承WebChromeClient重写该方法的onJsPrompt()/onConfirm()/onAlert()方法，用到那个方法重写那个就行，然后设置webView的WebChromeClient为该重写的类</p>
+<p>具体实现<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">HarlanWebChromeClient</span> <span class="keyword">extends</span> <span class="title">WebChromeClient</span> </span>&#123;</div><div class="line"></div><div class="line">        <span class="comment">/*此处覆盖的是javascript中的alert方法。</span></div><div class="line">         *当网页需要弹出alert窗口时，会执行onJsAlert中的方法</div><div class="line">         * 网页自身的alert方法不会被调用。</div><div class="line">         */</div><div class="line">        @Override</div><div class="line">        public boolean onJsAlert(WebView view, <span class="built_in">String</span> url, <span class="built_in">String</span> message,</div><div class="line">                                 JsResult result) &#123;</div><div class="line">            show(<span class="string">"onJsAlert"</span>);</div><div class="line">            result.confirm();</div><div class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="comment">/*此处覆盖的是javascript中的confirm方法。</span></div><div class="line">         *当网页需要弹出confirm窗口时，会执行onJsConfirm中的方法</div><div class="line">         * 网页自身的confirm方法不会被调用。</div><div class="line">         */</div><div class="line">        @Override</div><div class="line">        public boolean onJsConfirm(WebView view, <span class="built_in">String</span> url,</div><div class="line">                                   <span class="built_in">String</span> message, JsResult result) &#123;</div><div class="line">            show(<span class="string">"onJsConfirm"</span>);</div><div class="line">            result.confirm();</div><div class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="comment">/*此处覆盖的是javascript中的confirm方法。</span></div><div class="line">         *当网页需要弹出confirm窗口时，会执行onJsConfirm中的方法</div><div class="line">         * 网页自身的confirm方法不会被调用。</div><div class="line">         */</div><div class="line">        @Override</div><div class="line">        public boolean onJsPrompt(WebView view, <span class="built_in">String</span> url,</div><div class="line">                                  <span class="built_in">String</span> message, <span class="built_in">String</span> defaultValue,</div><div class="line">                                  JsPromptResult result) &#123;</div><div class="line">            show(<span class="string">"onJsPrompt...."</span>);</div><div class="line">            result.confirm();</div><div class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">        &#125;</div></pre></td></tr></table></figure></p>
+<p>webView设置该重写的类<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//设置ChromeClient</span></div><div class="line">mWebView.setWebChromeClient(<span class="keyword">new</span> HarlanWebChromeClient());</div></pre></td></tr></table></figure></p>
+<p>相应的在JS中的具体实现代码如下<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">cfm</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    confirm(<span class="string">""</span>)</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">pmt</span>(<span class="params"></span>) </span>&#123;</div><div class="line">   prompt(<span class="string">""</span>,<span class="string">""</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">onAlert</span>(<span class="params"></span>)</span></div><div class="line">&#123;</div><div class="line">    alert(<span class="string">"这是网页中的alert方法，如果重写了mWebView的onAlert方法，该方法不会执行"</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>触发页面中的js函数，例如：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;p&gt;&lt;input type="button" onclick="cfm()" value="Confirm"/&gt;&lt;/p&gt;</div><div class="line">&lt;p&gt;&lt;input type="button" onclick="pmt()" value="Prompt"/&gt;&lt;/p&gt;</div><div class="line">&lt;p&gt;&lt;input type="button" onclick="onAlert()" value="Alert"/&gt;</div></pre></td></tr></table></figure></p>
+<p>实现原理就是在页面中触发的方法被webView中设置的WebChromeClient给拦截了，从而执行了WebChromeClient中重写的onXxx()方法，<br>没有执行页面中相应的onXxx()方法，这是方式相对简单，而且安全。</p>
+<h3 id="参考链接："><a href="#参考链接：" class="headerlink" title="参考链接："></a>参考链接：</h3><p><a href="https://github.com/Sunzxyong/RainbowBridge" target="_blank" rel="external">https://github.com/Sunzxyong/RainbowBridge</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://ZQiang94.github.io/2017/05/01/README13/" data-id="cj203ccpb000408llgyo6mnct" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/04/29/README12/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Exception-getDrawable java.lang.NoSuchMethodError
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/05/02/README14/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">HTTP协议</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+ 
+     
+  <div class="comments" id="comments">
+    
+     
+       
+      <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+    
+  </div>
+ 
+  
+
+</section>
+           
+    <aside id="sidebar">
+  
+    
+
+  
+    
+    <div class="widget-wrap">
+    
+      <div class="widget" id="toc-widget-fixed">
+      
+        <strong class="toc-title">Content</strong>
+        <div class="toc-widget-list">
+              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#概述"><span class="toc-number">1.</span> <span class="toc-text">概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#sample运行效果图"><span class="toc-number">2.</span> <span class="toc-text">sample运行效果图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#方法1-webClient-loadUrl-："><span class="toc-number">3.</span> <span class="toc-text">方法1(webClient.loadUrl())：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#方法2-onAlert类似实现"><span class="toc-number">4.</span> <span class="toc-text">方法2 onAlert类似实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参考链接："><span class="toc-number">5.</span> <span class="toc-text">参考链接：</span></a></li></ol>
+          </div>
+      </div>
+    </div>
+
+  
+    
+
+  
+    
+  
+    
+  
+    
+
+  
+    
+  
+    <!--微信公众号二维码-->
+
+
+  
+</aside>
+
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-left">
+      &copy; 2014 - 2017 ZQiang94&nbsp;|&nbsp;
+      Theme by <a href="https://github.com/giscafer/hexo-theme-cafe/" target="_blank">Cafe</a>
+    </div>
+     <div id="footer-right">
+      Contact&nbsp;|&nbsp;zhangqiang452608069@gmail.com
+    </div>
+  </div>
+</footer>
+ <script src="/jquery/jquery.min.js"></script>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/about" class="mobile-nav-link">关于</a>
+  
+</nav>
+    <img class="back-to-top-btn" src="/images/fly-to-top.png"/>
+<script>
+// Elevator script included on the page, already.
+window.onload = function() {
+  var elevator = new Elevator({
+    selector:'.back-to-top-btn',
+    element: document.querySelector('.back-to-top-btn'),
+    duration: 1000 // milliseconds
+  });
+}
+</script>
+      
+
+  
+    <script>
+      var cloudTieConfig = {
+        url: document.location.href, 
+        sourceId: "",
+        productKey: "e2fb4051c49842xxce669e634bc983f",
+        target: "cloud-tie-wrapper"
+      };
+    </script>
+    <script src="https://img1.ws.126.net/f2e/tie/yun/sdk/loader.js"></script>
+    
+
+  
+
+
+
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      })
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      })
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+ <script src="/js/is.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+<script src="/js/elevator.js"></script>
+  </div>
+</body>
+</html>

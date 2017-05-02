@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Android多分辨率适配目录 | ZQiang94</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="多分辨率适配目录12345layout-large-mdpi   (1024x600)layout-large-tvdpi  (800x1280)layout-large-xhdpi  (1200x1920)layout-xlarge-mdpi  (1280x800)layout-xlarge-xhdpi (2560x1600)">
+<meta name="keywords">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android多分辨率适配目录">
+<meta property="og:url" content="http://ZQiang94.github.io/2017/04/04/README4/index.html">
+<meta property="og:site_name" content="ZQiang94">
+<meta property="og:description" content="多分辨率适配目录12345layout-large-mdpi   (1024x600)layout-large-tvdpi  (800x1280)layout-large-xhdpi  (1200x1920)layout-xlarge-mdpi  (1280x800)layout-xlarge-xhdpi (2560x1600)">
+<meta property="og:image" content="http://zqiang94.github.io/assets/readme4/img0.png">
+<meta property="og:image" content="http://zqiang94.github.io/assets/readme4/img1.png">
+<meta property="og:image" content="http://zqiang94.github.io/assets/readme4/img2.png">
+<meta property="og:updated_time" content="2017-05-02T06:34:09.460Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Android多分辨率适配目录">
+<meta name="twitter:description" content="多分辨率适配目录12345layout-large-mdpi   (1024x600)layout-large-tvdpi  (800x1280)layout-large-xhdpi  (1200x1920)layout-xlarge-mdpi  (1280x800)layout-xlarge-xhdpi (2560x1600)">
+<meta name="twitter:image" content="http://zqiang94.github.io/assets/readme4/img0.png">
+  
+    <link rel="alternate" href="/atom.xml" title="ZQiang94" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    
+    <div id="header-inner" class="inner">
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://ZQiang94.github.io"></form>
+      </div>
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">首页</a>
+        
+          <a class="main-nav-link" href="/archives">归档</a>
+        
+          <a class="main-nav-link" href="/about">关于</a>
+        
+      </nav>
+      
+    </div>
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">ZQiang94</a>
+      </h1>
+      
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-README4" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/04/04/README4/" class="article-date">
+  <time datetime="2017-04-03T16:00:00.000Z" itemprop="datePublished">2017-04-04</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Android多分辨率适配目录
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Table of Contents -->
+        
+        <h3 id="多分辨率适配目录"><a href="#多分辨率适配目录" class="headerlink" title="多分辨率适配目录"></a>多分辨率适配目录</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">layout-large-mdpi   (1024x600)</div><div class="line">layout-large-tvdpi  (800x1280)</div><div class="line">layout-large-xhdpi  (1200x1920)</div><div class="line">layout-xlarge-mdpi  (1280x800)</div><div class="line">layout-xlarge-xhdpi (2560x1600)</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<p>或者直接使用下面这样：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">layout-640x360</div><div class="line">layout-800x480</div></pre></td></tr></table></figure></p>
+<p>与 layout 对应的，有不同的 drawable：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">res/drawable        (default)</div><div class="line">res/drawable-ldpi/  (240x320 and nearer resolution)</div><div class="line">res/drawable-mdpi/  (320x480 and nearer resolution)</div><div class="line">res/drawable-hdpi/  (480x800, 540x960 and nearer resolution)</div><div class="line">res/drawable-xhdpi/  (720x1280 - Samsung S3, Micromax Canvas HD etc)</div><div class="line">res/drawable-xxhdpi/ (1080x1920 - Samsung S4, HTC one, Nexus 5, etc)</div></pre></td></tr></table></figure></p>
+<p>用不同的 layout 毕竟工作量巨大，我们的实践是用不同的 values 来对应同 layout 中的值，目录如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">res/values/dimens.xml(default)</div><div class="line">res/values-ldpi/dimens.xml   (240x320 and nearer resolution)</div><div class="line">res/values-mdpi/dimens.xml   (320x480 and nearer resolution)</div><div class="line">res/values-hdpi/dimens.xml   (480x800, 540x960 and nearer resolution)</div><div class="line">res/values-xhdpi/dimens.xml  (720x1280 - Samsung S3, Micromax Canvas HD, etc) </div><div class="line">res/values-xxhdpi/dimens.xml (1080x1920 - Samsung S4, HTC one, etc)</div><div class="line">res/values-large/dimens.xml  (480x800)</div><div class="line"></div><div class="line">res/values-large-mdpi/dimens.xml (600x1024)</div><div class="line">res/values-sw600dp/dimens.xml  (600x1024)</div><div class="line">res/values-sw720dp/dimens.xml  (800x1280)</div><div class="line">res/values-xlarge-xhdpi/dimens.xml (2560x1600 - Nexus 10<span class="string">")</span></div><div class="line">res/values-large-xhdpi/dimens.xml  (1200x1920 - Nexus 7"(latest))</div></pre></td></tr></table></figure></p>
+<p>有时必须要考虑到密度，如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">ldpi   120			dpi  0.75</div><div class="line">mdpi   160			dpi  1</div><div class="line">hdpi   240			dpi  1.5</div><div class="line">xhdpi  320			dpi  2</div></pre></td></tr></table></figure></p>
+<h3 id="获取设备屏幕信息"><a href="#获取设备屏幕信息" class="headerlink" title="获取设备屏幕信息"></a>获取设备屏幕信息</h3><p><img src="/assets/readme4/img0.png" alt=""><br>扫描二维码进行下载或者点击<a href="https://github.com/ZQiang94/DisplayInfo/releases" target="_blank" rel="external">下载</a></p>
+<p>通过运行DisplayInfo获取当前设备屏幕的尺寸信息，运行效果如图（Honor 7）：<br><img src="/assets/readme4/img1.png" alt="dispalyinfo在Honor 7上的运行效果"><br>通过运行结果可以看出，华为Honor 7的屏幕尺寸（4.94约为5.0），分辨率（Resolution）为1080 * 1920（缺少的为下面的按键），DPI为480dpi等信息。另外还有一些<br>Android适配时需要了解的尺寸限定符，详细讲解见<a href="https://developer.android.com/training/multiscreen/screensizes.html" target="_blank" rel="external">官方文档对尺寸限定符的解释</a>。<br>截屏，看图片分辨率，得知当前设备分辨率</p>
+<h3 id="市场主流分辨率"><a href="#市场主流分辨率" class="headerlink" title="市场主流分辨率"></a>市场主流分辨率</h3><p>现在市场主流的两种分辨率类型（分别是1080 <em> 1920与720 </em> 1280）,具体的分布情况在下图中展示。 如图展示的为16年07月份分辨率市场分布情况： 查看更详细信息[个推提供]<br><img src="/assets/readme4/img2.png" alt=""></p>
+<h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><p><a href="https://developer.android.com/reference/android/util/DisplayMetrics.html" target="_blank" rel="external">https://developer.android.com/reference/android/util/DisplayMetrics.html</a><br>屏幕尺寸<br>手机实际物理尺寸，一般用英寸来表示（1 英寸 = 2.54 厘米）。 手机尺寸计算方式=对角线尺寸/2.54 </p>
+<p>分辨率<br>屏幕上显示的像素个数，单位尺寸内像素点越多，显示的图像就越清楚。 分辨率720*1280表示手机水平方向的像素为720，垂直方向为1280.</p>
+<p>屏幕密度<br>表示屏幕每英寸有多少个像素。 240dpi（480800） 、320dpi（7201280）、480dpi（1080*1920）</p>
+<h3 id="单位"><a href="#单位" class="headerlink" title="单位"></a>单位</h3><p>dip<br>dot per inch，就是每英寸的像素数，也叫做屏幕密度。这个值越大，屏幕就越清晰。</p>
+<p>ppi<br>对Android而言，DPI等价于PPI(Pixels-Per-Inch)</p>
+<p>px<br>pixels(像素)，屏幕上的点，不同设备不同的显示屏显示效果相同，这是绝对像素，是多少就永远是多少不会改变。</p>
+<p>dp<br>(andriod开发中用于描述尺寸和间距）与密度无关的像素。</p>
+<p>sp<br>scaled pixels — best for text size (放大像素)（与刻度无关的像素）和dp一样，只是用于描述字号和行距。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://ZQiang94.github.io/2017/04/04/README4/" data-id="cj2011x3g0004o0llphxap2x4" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/04/01/README2/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          平常阅读中收集的部分博文记录
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/04/08/README5/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Android空包签名</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+ 
+     
+  <div class="comments" id="comments">
+    
+     
+       
+      <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+    
+  </div>
+ 
+  
+
+</section>
+           
+    <aside id="sidebar">
+  
+    
+
+  
+    
+    <div class="widget-wrap">
+    
+      <div class="widget" id="toc-widget-fixed">
+      
+        <strong class="toc-title">Content</strong>
+        <div class="toc-widget-list">
+              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#多分辨率适配目录"><span class="toc-number">1.</span> <span class="toc-text">多分辨率适配目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#获取设备屏幕信息"><span class="toc-number">2.</span> <span class="toc-text">获取设备屏幕信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#市场主流分辨率"><span class="toc-number">3.</span> <span class="toc-text">市场主流分辨率</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#基本概念"><span class="toc-number">4.</span> <span class="toc-text">基本概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#单位"><span class="toc-number">5.</span> <span class="toc-text">单位</span></a></li></ol>
+          </div>
+      </div>
+    </div>
+
+  
+    
+
+  
+    
+  
+    
+  
+    
+
+  
+    
+  
+    <!--微信公众号二维码-->
+
+
+  
+</aside>
+
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-left">
+      &copy; 2014 - 2017 ZQiang94&nbsp;|&nbsp;
+      Theme by <a href="https://github.com/giscafer/hexo-theme-cafe/" target="_blank">Cafe</a>
+    </div>
+     <div id="footer-right">
+      Contact&nbsp;|&nbsp;zhangqiang452608069@gmail.com
+    </div>
+  </div>
+</footer>
+ <script src="/jquery/jquery.min.js"></script>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/about" class="mobile-nav-link">关于</a>
+  
+</nav>
+    <img class="back-to-top-btn" src="/images/fly-to-top.png"/>
+<script>
+// Elevator script included on the page, already.
+window.onload = function() {
+  var elevator = new Elevator({
+    selector:'.back-to-top-btn',
+    element: document.querySelector('.back-to-top-btn'),
+    duration: 1000 // milliseconds
+  });
+}
+</script>
+      
+
+  
+    <script>
+      var cloudTieConfig = {
+        url: document.location.href, 
+        sourceId: "",
+        productKey: "e2fb4051c49842xxce669e634bc983f",
+        target: "cloud-tie-wrapper"
+      };
+    </script>
+    <script src="https://img1.ws.126.net/f2e/tie/yun/sdk/loader.js"></script>
+    
+
+  
+
+
+
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      })
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      })
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+ <script src="/js/is.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+<script src="/js/elevator.js"></script>
+  </div>
+</body>
+</html>

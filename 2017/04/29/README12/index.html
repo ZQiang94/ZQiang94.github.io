@@ -3,15 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>ZQiang94</title>
+  <title>Exception-getDrawable java.lang.NoSuchMethodError | ZQiang94</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="ZQiang94">
-<meta property="og:url" content="http://ZQiang94.github.io/404.html">
+  <meta name="description" content="直接调用getDrawable()时候报Exception Info：1java.lang.NoSuchMethodError 换成如下方式调用getDrawable()即可。">
+<meta name="keywords">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Exception-getDrawable java.lang.NoSuchMethodError">
+<meta property="og:url" content="http://ZQiang94.github.io/2017/04/29/README12/index.html">
 <meta property="og:site_name" content="ZQiang94">
-<meta property="og:updated_time" content="2017-04-27T06:36:47.268Z">
+<meta property="og:description" content="直接调用getDrawable()时候报Exception Info：1java.lang.NoSuchMethodError 换成如下方式调用getDrawable()即可。">
+<meta property="og:updated_time" content="2017-05-02T06:32:14.277Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ZQiang94">
+<meta name="twitter:title" content="Exception-getDrawable java.lang.NoSuchMethodError">
+<meta name="twitter:description" content="直接调用getDrawable()时候报Exception Info：1java.lang.NoSuchMethodError 换成如下方式调用getDrawable()即可。">
   
     <link rel="alternate" href="/atom.xml" title="ZQiang94" type="application/atom+xml">
   
@@ -64,27 +68,38 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="page-undefined" class="article article-type-page" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-README12" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/404.html" class="article-date">
-  <time datetime="2017-04-27T06:36:47.268Z" itemprop="datePublished">2017-04-27</time>
+    <a href="/2017/04/29/README12/" class="article-date">
+  <time datetime="2017-04-28T16:00:00.000Z" itemprop="datePublished">2017-04-29</time>
 </a>
     
   </div>
   <div class="article-inner">
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Exception-getDrawable java.lang.NoSuchMethodError
+    </h1>
+  
+
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
         <!-- Table of Contents -->
         
-        <script type="text/javascript" src="//qzonestyle.gtimg.cn/qzone/hybrid/app/404/search_children.js" charset="utf-8"></script>
-
-<script type="text/javascript" src="//qzonestyle.gtimg.cn/qzone/hybrid/app/404/search_children.js" charset="utf-8" homepageurl="https://zqiang94.github.io/" homepagename="GoBack To ZQiang94"></script>
+        <p>直接调用getDrawable()时候报Exception Info：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">java.lang.NoSuchMethodError</div></pre></td></tr></table></figure></p>
+<p>换成如下方式调用getDrawable()即可。</p>
+<a id="more"></a>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">TextView.setCompoundDrawablesWithIntrinsicBounds(null,</div><div class="line">                getResources().getDrawable(R.drawable.alarm_young_ing), null, null);</div></pre></td></tr></table></figure>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://ZQiang94.github.io/404.html" data-id="cj2013f2v0000roll195l6sdy" class="article-share-link">Share</a>
+      <a data-url="http://ZQiang94.github.io/2017/04/29/README12/" data-id="cj203ccp5000208ll1svjsjsp" class="article-share-link">Share</a>
       
       
       
@@ -92,6 +107,25 @@
   </div>
   
     
+<nav id="article-nav">
+  
+    <a href="/2017/04/29/README11/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Exception-android.view.WindowLeaked
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/05/01/README13/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">js与native的交互</div>
+    </a>
+  
+</nav>
+
   
 </article>
  
