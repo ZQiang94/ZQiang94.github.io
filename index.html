@@ -37,7 +37,7 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://ZQiang94.github.io"></form>
@@ -64,6 +64,94 @@
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-README13" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/05/02/README13/" class="article-date">
+  <time datetime="2017-05-02T04:00:00.000Z" itemprop="datePublished">2017-05-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/05/02/README13/">WebView-js与native的交互</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>目前所常用的native与js交互有两种方式，分别为 下面提到的方法1与方法2，这两种方式各有利弊，在4.2之前使用方法1存在安全问题，<br>类似与sql的注入漏洞，这是运行时虚拟机的漏洞，暂且这样理解吧。另外无论哪种方式，都要与页面开发人员定要协议。</p>
+        
+          <p class="article-more-link">
+            <a href="/2017/05/02/README13/#more">继续阅读全文 »</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://ZQiang94.github.io/2017/05/02/README13/" data-id="cj203ccpb000408llgyo6mnct" class="article-share-link">分享</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+ 
+
+
+  
+    <article id="post-README17" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/05/02/README17/" class="article-date">
+  <time datetime="2017-05-01T16:00:00.000Z" itemprop="datePublished">2017-05-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/05/02/README17/">WebView-APIs</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>WebView APIs</p>
+<h3 id="碎言"><a href="#碎言" class="headerlink" title="碎言"></a>碎言</h3><p>1.Android 4.4之前，内核为WebKit，之后为chromium内核，主要是提升了性能以及对H5、CSS3、JavaScript的支持。</p>
+<p>2.WebView继承自AbsoluteLayout,即可以在内部添加布局。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">public <span class="class"><span class="keyword">class</span> <span class="title">WebView</span> <span class="keyword">extends</span> <span class="title">AbsoluteLayout</span></div><div class="line">        <span class="title">implements</span> <span class="title">ViewTreeObserver</span>.<span class="title">OnGlobalFocusChangeListener</span>,</div><div class="line">        <span class="title">ViewGroup</span>.<span class="title">OnHierarchyChangeListener</span>, <span class="title">ViewDebug</span>.<span class="title">HierarchyHandler</span> </span>&#123;</div><div class="line">......</div></pre></td></tr></table></figure></p>
+        
+          <p class="article-more-link">
+            <a href="/2017/05/02/README17/#more">继续阅读全文 »</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://ZQiang94.github.io/2017/05/02/README17/" data-id="cj2ljjbhd0000wolljsoia2n3" class="article-share-link">分享</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+ 
+
+
   
     <article id="post-README16" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -96,50 +184,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://ZQiang94.github.io/2017/05/02/README16/" data-id="cj28hw8r60000dkll9wayxhv7" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
- 
-
-
-  
-    <article id="post-README14" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/05/02/README14/" class="article-date">
-  <time datetime="2017-05-01T16:00:00.000Z" itemprop="datePublished">2017-05-02</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/02/README14/">HTTP协议</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="什么是HTTP？"><a href="#什么是HTTP？" class="headerlink" title="什么是HTTP？"></a>什么是HTTP？</h3><p>是客户端与服务端请求和相应的标准TCP；<br>是一个属于应用层的面向对象的协议。<br>当我们打开百度网页时是Https，这个S就是TLS、SSL。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">https://www.baidu.com/</div></pre></td></tr></table></figure></p>
-        
-          <p class="article-more-link">
-            <a href="/2017/05/02/README14/#more">继续阅读全文 »</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://ZQiang94.github.io/2017/05/02/README14/" data-id="cj2766rr10000mwll1mmj5fbk" class="article-share-link">Share</a>
+      <a data-url="http://ZQiang94.github.io/2017/05/02/README16/" data-id="cj28hw8r60000dkll9wayxhv7" class="article-share-link">分享</a>
       
       
       
@@ -182,7 +227,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://ZQiang94.github.io/2017/05/02/README15/" data-id="cj277lxco0000dsll26ot0n2d" class="article-share-link">Share</a>
+      <a data-url="http://ZQiang94.github.io/2017/05/02/README15/" data-id="cj277lxco0000dsll26ot0n2d" class="article-share-link">分享</a>
       
       
       
@@ -194,10 +239,10 @@
 
 
   
-    <article id="post-README13" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-README14" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/05/01/README13/" class="article-date">
-  <time datetime="2017-04-30T16:00:00.000Z" itemprop="datePublished">2017-05-01</time>
+    <a href="/2017/05/02/README14/" class="article-date">
+  <time datetime="2017-05-01T16:00:00.000Z" itemprop="datePublished">2017-05-02</time>
 </a>
     
   </div>
@@ -208,7 +253,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/01/README13/">js与native的交互</a>
+      <a class="article-title" href="/2017/05/02/README14/">HTTP协议</a>
     </h1>
   
 
@@ -216,59 +261,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>目前所常用的native与js交互有两种方式，分别为 下面提到的方法1与方法2，这两种方式各有利弊，在4.2之前使用方法1存在安全问题，<br>类似与sql的注入漏洞，这是运行时虚拟机的漏洞，暂且这样理解吧。另外无论哪种方式，都要与页面开发人员定要协议。</p>
+        <h3 id="什么是HTTP？"><a href="#什么是HTTP？" class="headerlink" title="什么是HTTP？"></a>什么是HTTP？</h3><p>是客户端与服务端请求和相应的标准TCP；<br>是一个属于应用层的面向对象的协议。<br>当我们打开百度网页时是Https，这个S就是TLS、SSL。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">https://www.baidu.com/</div></pre></td></tr></table></figure></p>
         
           <p class="article-more-link">
-            <a href="/2017/05/01/README13/#more">继续阅读全文 »</a>
+            <a href="/2017/05/02/README14/#more">继续阅读全文 »</a>
           </p>
         
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://ZQiang94.github.io/2017/05/01/README13/" data-id="cj203ccpb000408llgyo6mnct" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
- 
-
-
-  
-    <article id="post-README11" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/04/29/README11/" class="article-date">
-  <time datetime="2017-04-28T16:00:00.000Z" itemprop="datePublished">2017-04-29</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/29/README11/">Exception-android.view.WindowLeaked</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="/assets/readme11/img0.png" alt=""><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">WindowManager(24325): android.view.WindowLeaked: Activity com.haier.uhome.wash.ui.activity.WashServiceAllActivity has leaked window android.widget.ZoomButtonsController<span class="variable">$Container</span>&#123;42915d48 V.E..... ......I. 0,0-720,97&#125; that was originally added here</div></pre></td></tr></table></figure></p>
-        
-          <p class="article-more-link">
-            <a href="/2017/04/29/README11/#more">继续阅读全文 »</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://ZQiang94.github.io/2017/04/29/README11/" data-id="cj203ccp2000108llv0kx55oa" class="article-share-link">Share</a>
+      <a data-url="http://ZQiang94.github.io/2017/05/02/README14/" data-id="cj2766rr10000mwll1mmj5fbk" class="article-share-link">分享</a>
       
       
       
@@ -312,7 +314,50 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://ZQiang94.github.io/2017/04/29/README12/" data-id="cj203ccp5000208ll1svjsjsp" class="article-share-link">Share</a>
+      <a data-url="http://ZQiang94.github.io/2017/04/29/README12/" data-id="cj203ccp5000208ll1svjsjsp" class="article-share-link">分享</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+ 
+
+
+  
+    <article id="post-README11" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/04/29/README11/" class="article-date">
+  <time datetime="2017-04-28T16:00:00.000Z" itemprop="datePublished">2017-04-29</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/04/29/README11/">Exception-android.view.WindowLeaked</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="/assets/readme11/img0.png" alt=""><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">WindowManager(24325): android.view.WindowLeaked: Activity com.haier.uhome.wash.ui.activity.WashServiceAllActivity has leaked window android.widget.ZoomButtonsController<span class="variable">$Container</span>&#123;42915d48 V.E..... ......I. 0,0-720,97&#125; that was originally added here</div></pre></td></tr></table></figure></p>
+        
+          <p class="article-more-link">
+            <a href="/2017/04/29/README11/#more">继续阅读全文 »</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://ZQiang94.github.io/2017/04/29/README11/" data-id="cj203ccp2000108llv0kx55oa" class="article-share-link">分享</a>
       
       
       
@@ -356,7 +401,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://ZQiang94.github.io/2017/04/25/README10/" data-id="cj203ccos000008llr8hp99qd" class="article-share-link">Share</a>
+      <a data-url="http://ZQiang94.github.io/2017/04/25/README10/" data-id="cj203ccos000008llr8hp99qd" class="article-share-link">分享</a>
       
       
       
@@ -400,7 +445,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://ZQiang94.github.io/2017/04/20/README9/" data-id="cj203ccp8000308llmw4o13fa" class="article-share-link">Share</a>
+      <a data-url="http://ZQiang94.github.io/2017/04/20/README9/" data-id="cj203ccp8000308llmw4o13fa" class="article-share-link">分享</a>
       
       
       
@@ -444,50 +489,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://ZQiang94.github.io/2017/04/15/README8/" data-id="cj2011x3y0008o0llnyifsqw6" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
- 
-
-
-  
-    <article id="post-README6" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/04/10/README6/" class="article-date">
-  <time datetime="2017-04-09T16:00:00.000Z" itemprop="datePublished">2017-04-10</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/10/README6/">Android gitignore</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Android常用的gitignore</p>
-        
-          <p class="article-more-link">
-            <a href="/2017/04/10/README6/#more">继续阅读全文 »</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://ZQiang94.github.io/2017/04/10/README6/" data-id="cj2011x3p0006o0llke1qic4t" class="article-share-link">Share</a>
+      <a data-url="http://ZQiang94.github.io/2017/04/15/README8/" data-id="cj2011x3y0008o0llnyifsqw6" class="article-share-link">分享</a>
       
       
       
@@ -502,7 +504,7 @@
 
 
   <nav id="page-nav">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next&raquo;</a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">下一页&raquo;</a>
   </nav>
 </section>
            
@@ -540,16 +542,20 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title recent-posts">Recent Posts</h3>
+    <h3 class="widget-title recent-posts">最新文章</h3>
     <div class="widget">
       <ul>
         
           <li>
-            <a href="/2017/05/02/README16/">SDK目录讲解</a>
+            <a href="/2017/05/02/README13/">WebView-js与native的交互</a>
           </li>
         
           <li>
-            <a href="/2017/05/02/README14/">HTTP协议</a>
+            <a href="/2017/05/02/README17/">WebView-APIs</a>
+          </li>
+        
+          <li>
+            <a href="/2017/05/02/README16/">SDK目录讲解</a>
           </li>
         
           <li>
@@ -557,11 +563,7 @@
           </li>
         
           <li>
-            <a href="/2017/05/01/README13/">js与native的交互</a>
-          </li>
-        
-          <li>
-            <a href="/2017/04/29/README11/">Exception-android.view.WindowLeaked</a>
+            <a href="/2017/05/02/README14/">HTTP协议</a>
           </li>
         
       </ul>
@@ -571,9 +573,9 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title archive">Archives</h3>
+    <h3 class="widget-title archive">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">2</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -621,7 +623,7 @@
   <div class="outer">
     <div id="footer-left">
       &copy; 2016 - 2017 ZQiang94&nbsp;|&nbsp;
-      Theme by <a href="https://github.com/giscafer/hexo-theme-cafe/" target="_blank">Cafe</a>
+      主题 <a href="https://github.com/giscafer/hexo-theme-cafe/" target="_blank">Cafe</a>
     </div>
 	<div id="footer-center">
 		<span id="busuanzi_container_site_pv">
@@ -629,7 +631,7 @@
 		</span>
 	</div>
      <div id="footer-right">
-      Contact&nbsp;|&nbsp;zhangqiang452608069@gmail.com
+      联系方式&nbsp;|&nbsp;zhangqiang452608069@gmail.com
     </div>
   </div>
 </footer>
