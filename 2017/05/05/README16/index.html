@@ -3,14 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>归档: 2017 | ZQiang94</title>
+  <title>SDK目录讲解 | ZQiang94</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="ZQiang94">
-<meta property="og:url" content="http://ZQiang94.github.io/archives/2017/page/2/index.html">
+  <meta name="description" content="SDK安装目录">
+<meta name="keywords">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SDK目录讲解">
+<meta property="og:url" content="http://ZQiang94.github.io/2017/05/05/README16/index.html">
 <meta property="og:site_name" content="ZQiang94">
+<meta property="og:description" content="SDK安装目录">
+<meta property="og:image" content="http://zqiang94.github.io/assets/readme16/img0.png">
+<meta property="og:updated_time" content="2017-05-12T08:00:35.964Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ZQiang94">
+<meta name="twitter:title" content="SDK目录讲解">
+<meta name="twitter:description" content="SDK安装目录">
+<meta name="twitter:image" content="http://zqiang94.github.io/assets/readme16/img0.png">
   
     <link rel="alternate" href="/atom.xml" title="ZQiang94" type="application/atom+xml">
   
@@ -63,179 +70,78 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-         <span class="archive-year-post">18 post  this year</span>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/04/13/README7/" class="archive-article-date">
-  <time datetime="2017-04-12T16:00:00.000Z" itemprop="datePublished">04-13</time>
+        <section id="main"><article id="post-README16" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/05/05/README16/" class="article-date">
+  <time datetime="2017-05-04T16:00:00.000Z" itemprop="datePublished">2017-05-05</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/13/README7/">设计模式-Builder</a>
+    <h1 class="article-title" itemprop="name">
+      SDK目录讲解
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/04/10/README6/" class="archive-article-date">
-  <time datetime="2017-04-09T16:00:00.000Z" itemprop="datePublished">04-10</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/10/README6/">Android gitignore</a>
-    </h1>
-  
+        <!-- Table of Contents -->
+        
+        <p>SDK安装目录</p>
+<a id="more"></a>
+<p><img src="/assets/readme16/img0.png" alt="SDK目录"><br>1、add-ons 这里面保存着附加库，第三方公司为android 平台开发的附加功能系统。比如GoogleMaps，当然你如果安装了OphoneSDK，这里也会有一些类库在里面。<br>2、docs这里面是Android SDKAPI参考文档，所有的API都可以在这里查到。<br>3、extras/market_licensing作为AndroidMarket版权保护组件，一般发布付费应用到电子市场可以用它来反盗版。<br>4、platforms是每个平台的SDK真正的文件，存放了不同版本的android系统。里面会根据APILevel划分的SDK版本，这里就以Android2.2来说，进入后有 一个android-8的文件夹，android-8进入后是Android2.2SDK的主要文件，其中ant为ant编译脚本，data保存着一些系 统资源，images是模拟器映像文件，skins则是Android模拟器的皮肤，templates是工程创建的默认模板，android.jar则 是该版本的主要framework文件，tools目录里面包含了重要的编译工具，比如aapt、aidl、逆向调试工具dexdump和编译脚本dx。<br>5、platform-tools保存着一些Android平台相关通用工具，比如adb、和aapt、aidl、dx等文件，Android123提示，这里和platforms目录中tools文件夹有些重复，主要是从android2.3开始这些工具被划分为通用了。Fastboot 刷机工具。<br>6、samples是Android SDK自带的默认示例工程，里面的apidemos强烈推荐初学者运行学 习，对于SQLite数据库操作可以查看NotePad这个例子，对于游戏开发Snake、LunarLander都是不错的例子，对于Android主 题开发Home则是androidm5时代的主题设计原理。<br>7、tools作为SDK根目录下的tools文件夹，这里包含了android 开发和调试的工具，比如ddms用于启动Android调试工具，比如logcat、屏 幕截图和文件管理器，而draw9patch则是绘制android平台的可缩放png图片的工具，sqlite3可以在PC上操作SQLite数据库， 而monkeyrunner则是一个不错的压力测试应用，模拟用户随机按键，mksdcard则是模拟器SD映像的创建工具，emulator是 Android SDK模拟器主程序，不过从android 1.5开始，需要输入合适的参数才能启动模拟器，traceview作为android平台上重要的调试工具。<br>8、extras 该文件夹下存放了google提供额USB驱动、Intel提供的硬件加速等附加工具包<br>9、build-tools 保存着一些Android平台相关通用工具，比如adb、和aapt、aidl、dx等文件。<br>aapt即Android Asset Packaging Tool , 在SDK的build-tools目录下. 该工具可以查看, 创建, 更新ZIP格式的文档附件(zip, jar, apk). 也可将资源文件编译成二进制文件.<br>Adb 即android debug bridge 管理模拟器和真机的万能工具，ddms 调试环境<br>AIDL 即 Android Interface definition language 它是一种android内部进程通信接口的描述语言，通过它我们可以定义进程间的通信接口<br>Emulator即android 的模拟器<br>Dexdump 即Android Emulator中可以找到一个名为dexdump的程序，通过dexdump可以查看出apk文件中的dex执行情况，粗略分析出原始java代码是什 么样的和Dot Net中的Reflector很像。</p>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/04/08/README5/" class="archive-article-date">
-  <time datetime="2017-04-07T16:00:00.000Z" itemprop="datePublished">04-08</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/08/README5/">Android空包签名</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/04/04/README4/" class="archive-article-date">
-  <time datetime="2017-04-03T16:00:00.000Z" itemprop="datePublished">04-04</time>
-</a>
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://ZQiang94.github.io/2017/05/05/README16/" data-id="cj28hw8r60000dkll9wayxhv7" class="article-share-link">分享</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/04/README4/">Android多分辨率适配目录</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/04/02/README3/" class="archive-article-date">
-  <time datetime="2017-04-01T16:00:00.000Z" itemprop="datePublished">04-02</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/02/README3/">Java中回调接口的简单使用</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/04/01/README2/" class="archive-article-date">
-  <time datetime="2017-03-31T16:00:00.000Z" itemprop="datePublished">04-01</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/01/README2/">平常阅读中收集的部分博文记录</a>
-    </h1>
-  
-
-    </header>
+    </footer>
   </div>
-</article>
   
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/03/29/README1/" class="archive-article-date">
-  <time datetime="2017-03-28T16:00:00.000Z" itemprop="datePublished">03-29</time>
-</a>
-      
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/29/README1/">使用Hexo + Github Pages搭建个人站点</a>
-    </h1>
+    <a href="/2017/05/03/README15/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          UML类图
+        
+      </div>
+    </a>
   
+  
+    <a href="/2017/05/10/README13/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">WebView-js与native的交互</div>
+    </a>
+  
+</nav>
 
-    </header>
+  
+</article>
+ 
+     
+  <div class="comments" id="comments">
+    
+     
+       
+      <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+    
   </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/03/25/README0/" class="archive-article-date">
-  <time datetime="2017-03-24T16:00:00.000Z" itemprop="datePublished">03-25</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/25/README0/">Git Common Cmds</a>
-    </h1>
+ 
   
 
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-
-  <nav id="page-nav">
-    <a class="extend prev" rel="prev" href="/archives/2017/">&laquo; 上一页</a><a class="page-number" href="/archives/2017/">1</a><span class="page-number current">2</span>
-  </nav>
 </section>
            
     <aside id="sidebar">
@@ -282,13 +188,6 @@
 
   
     
-  <div class="widget-wrap">
-    <h3 class="widget-title archive">归档</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">2</span></li></ul>
-    </div>
-  </div>
-
 
   
     
