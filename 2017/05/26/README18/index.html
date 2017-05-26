@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>字节与进制 | ZQiang94</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="字节与进制 8位二进制我们称之为一个字节二进制的表达范围值是从0b00000000～0b11111111，而我们程序中用十六进制表示的时候就是从0x00到0xFF，可以使用8421的方式快速计算。 Java语言提供了八种基本类型。六种数字类型（四个整数型，两个浮点型），一种字符类型，还有一种布尔型。">
+<meta name="keywords">
+<meta property="og:type" content="article">
+<meta property="og:title" content="字节与进制">
+<meta property="og:url" content="http://ZQiang94.github.io/2017/05/26/README18/index.html">
+<meta property="og:site_name" content="ZQiang94">
+<meta property="og:description" content="字节与进制 8位二进制我们称之为一个字节二进制的表达范围值是从0b00000000～0b11111111，而我们程序中用十六进制表示的时候就是从0x00到0xFF，可以使用8421的方式快速计算。 Java语言提供了八种基本类型。六种数字类型（四个整数型，两个浮点型），一种字符类型，还有一种布尔型。">
+<meta property="og:updated_time" content="2017-05-26T09:17:21.457Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="字节与进制">
+<meta name="twitter:description" content="字节与进制 8位二进制我们称之为一个字节二进制的表达范围值是从0b00000000～0b11111111，而我们程序中用十六进制表示的时候就是从0x00到0xFF，可以使用8421的方式快速计算。 Java语言提供了八种基本类型。六种数字类型（四个整数型，两个浮点型），一种字符类型，还有一种布尔型。">
+  
+    <link rel="alternate" href="/atom.xml" title="ZQiang94" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    
+    <div id="header-inner" class="inner">
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://ZQiang94.github.io"></form>
+      </div>
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">首页</a>
+        
+          <a class="main-nav-link" href="/archives">归档</a>
+        
+          <a class="main-nav-link" href="/about">关于</a>
+        
+      </nav>
+      
+    </div>
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">ZQiang94</a>
+      </h1>
+      
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-README18" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/05/26/README18/" class="article-date">
+  <time datetime="2017-05-25T16:00:00.000Z" itemprop="datePublished">2017-05-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      字节与进制
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Table of Contents -->
+        
+        <p>字节与进制</p>
+<p>8位二进制我们称之为一个字节<br>二进制的表达范围值是从0b00000000～0b11111111，而我们程序中用十六进制表示的时候就是从0x00到0xFF，可以使用8421的方式快速计算。</p>
+<p>Java语言提供了八种基本类型。六种数字类型（四个整数型，两个浮点型），一种字符类型，还有一种布尔型。</p>
+<a id="more"></a>
+<h5 id="byte："><a href="#byte：" class="headerlink" title="byte："></a>byte：</h5><pre><code>* byte 数据类型是8位、有符号的，以二进制补码表示的整数；
+* 最小值是 -128（-2^7）；
+* 最大值是 127（2^7-1）；
+* 默认值是 0；
+* byte 类型用在大型数组中节约空间，主要代替整数，因为 byte 变量占用的空间只有 int 类型的四分之一；
+* 例子：byte a = 100，byte b = -50。
+</code></pre><h5 id="short："><a href="#short：" class="headerlink" title="short："></a>short：</h5><pre><code>* short 数据类型是 16 位、有符号的以二进制补码表示的整数
+* 最小值是 -32768（-2^15）；
+* 最大值是 32767（2^15 - 1）；
+* Short 数据类型也可以像 byte 那样节省空间。一个short变量是int型变量所占空间的二分之一；
+* 默认值是 0；
+* 例子：short s = 1000，short r = -20000。
+</code></pre><h5 id="int："><a href="#int：" class="headerlink" title="int："></a>int：</h5><pre><code>* int 数据类型是32位、有符号的以二进制补码表示的整数；
+* 最小值是 -2,147,483,648（-2^31）；
+* 最大值是 2,147,483,647（2^31 - 1）；
+* 一般地整型变量默认为 int 类型；
+* 默认值是 0 ；
+* 例子：int a = 100000, int b = -200000。
+</code></pre><h5 id="long："><a href="#long：" class="headerlink" title="long："></a>long：</h5><pre><code>* long 数据类型是 64 位、有符号的以二进制补码表示的整数；
+* 最小值是 -9,223,372,036,854,775,808（-2^63）；
+* 最大值是 9,223,372,036,854,775,807（2^63 -1）；
+* 这种类型主要使用在需要比较大整数的系统上；
+* 默认值是 0L；
+* 例子： long a = 100000L，Long b = -200000L。
+</code></pre><p>“L”理论上不分大小写，但是若写成”l”容易与数字”1”混淆，不容易分辩。所以最好大写。</p>
+<h5 id="float："><a href="#float：" class="headerlink" title="float："></a>float：</h5><pre><code>* float 数据类型是单精度、32位、符合IEEE 754标准的浮点数；
+* float 在储存大型浮点数组的时候可节省内存空间；
+* 默认值是 0.0f；
+* 浮点数不能用来表示精确的值，如货币；
+* 例子：float f1 = 234.5f。
+</code></pre><h5 id="double："><a href="#double：" class="headerlink" title="double："></a>double：</h5><pre><code>* double 数据类型是双精度、64 位、符合IEEE 754标准的浮点数；
+* 浮点数的默认类型为double类型；
+* double类型同样不能表示精确的值，如货币；
+* 默认值是 0.0d；
+* 例子：double d1 = 123.4。
+</code></pre><h5 id="boolean："><a href="#boolean：" class="headerlink" title="boolean："></a>boolean：</h5><pre><code>* boolean数据类型表示一位的信息；
+* 只有两个取值：true 和 false；
+* 这种类型只作为一种标志来记录 true/false 情况；
+* 默认值是 false；
+* 例子：boolean one = true。
+</code></pre><h5 id="char："><a href="#char：" class="headerlink" title="char："></a>char：</h5><pre><code>* char类型是一个单一的 16 位 Unicode 字符；
+* 最小值是 \u0000（即为0）；
+* 最大值是 \uffff（即为65,535）；
+* char 数据类型可以储存任何字符；
+* 例子：char letter = &apos;A&apos;;
+</code></pre><h5 id="解析类"><a href="#解析类" class="headerlink" title="解析类"></a>解析类</h5><p>以下是项目中用到的一个解析衣物的类，首先将高中低三个int类型的值，按照每八位倒序，完成排序；然后取信息，排序后的前四位是材质，接下来五位是颜色，以此类推。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div></pre></td><td class="code"><pre><div class="line">//衣物解析类</div><div class="line">public class ClothesInfoAnalysis &#123;</div><div class="line">    private static final String TAG = ClothesInfoAnalysis.class.getSimpleName();</div><div class="line"></div><div class="line">    private static ClothesInfoAnalysis instance;</div><div class="line">    private long low, mid, high;</div><div class="line">    private long clothInfo;</div><div class="line"></div><div class="line">    public static ClothesInfoAnalysis <span class="function"><span class="title">getInstance</span></span>() &#123;</div><div class="line">        <span class="keyword">if</span> (instance == null) &#123;</div><div class="line">            synchronized (ClothesInfoAnalysis.class) &#123;</div><div class="line">                instance = new ClothesInfoAnalysis();</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="built_in">return</span> instance;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    private <span class="function"><span class="title">ClothesInfoAnalysis</span></span>() &#123;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public AnalysisClo AnalysisData(RfidResultInfo cloInfo) &#123;</div><div class="line">        this.low = cloInfo.getClothLow();</div><div class="line">        this.mid = cloInfo.getClothMid();</div><div class="line">        this.high = cloInfo.getClothHigh();</div><div class="line">        L.i(TAG, <span class="string">"衣物ID："</span> + cloInfo.getClothSerialId() + <span class="string">"\n"</span></div><div class="line">                + <span class="string">"高字节："</span> + high + <span class="string">"\n"</span></div><div class="line">                + <span class="string">"中字节："</span> + mid + <span class="string">"\n"</span></div><div class="line">                + <span class="string">"低字节："</span> + low);</div><div class="line"></div><div class="line">        handlerRfidResultInfo();</div><div class="line"></div><div class="line">        <span class="built_in">return</span> analysisClothInfo();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    /**</div><div class="line">    * 将high,mid,low每8位取出，按倒序排列</div><div class="line">    * &lt;p&gt;</div><div class="line">    * eg.</div><div class="line">    * high = 145(00 91);    mid = 64(00 40);    low = 36723(8F 73);</div><div class="line">    * 00 91 00 40 8F 73</div><div class="line">    * 经过如下转换变为：</div><div class="line">    * 73 8F 40 00 91 00</div><div class="line">    */</div><div class="line">    private void <span class="function"><span class="title">handlerRfidResultInfo</span></span>() &#123;</div><div class="line"></div><div class="line">        clothInfo = (low &amp; 0xFF);</div><div class="line">        clothInfo = (clothInfo &lt;&lt; 8) + ((low &amp; 0xFF00) &gt;&gt; 8);</div><div class="line">        clothInfo = (clothInfo &lt;&lt; 8) + (mid &amp; 0xFF);</div><div class="line">        clothInfo = (clothInfo &lt;&lt; 8) + ((mid &amp; 0xFF00) &gt;&gt; 8);</div><div class="line">        clothInfo = (clothInfo &lt;&lt; 8) + (high &amp; 0xFF);</div><div class="line">        clothInfo = (clothInfo &lt;&lt; 8) + ((high &amp; 0xFF00) &gt;&gt; 8);</div><div class="line"></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    private AnalysisClo <span class="function"><span class="title">analysisClothInfo</span></span>() &#123;</div><div class="line">        long material = (clothInfo &gt;&gt; 44) &amp; 0x0F;</div><div class="line">        long color = (clothInfo &gt;&gt; 39) &amp; 0x1F;</div><div class="line">        long style = (clothInfo &gt;&gt; 33) &amp; 0x3F;</div><div class="line">        long spec = (clothInfo &gt;&gt; 28) &amp; 0x1F;</div><div class="line">        long brand = (clothInfo &gt;&gt; 16) &amp; 0xcF;</div><div class="line">        AnalysisClo clo = new AnalysisClo(material, color, style, spec, brand);</div><div class="line"></div><div class="line">        <span class="built_in">return</span> clo;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    //获取衣服材质，材质占32~29位</div><div class="line">    public long <span class="function"><span class="title">getCloMaterial</span></span>() &#123;</div><div class="line">        long material = (clothInfo &gt;&gt; 44) &amp; 0x0F;</div><div class="line">        <span class="built_in">return</span> material;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    //颜色占28~23位</div><div class="line">    public long <span class="function"><span class="title">getCloColor</span></span>() &#123;</div><div class="line">        long color = (clothInfo &gt;&gt; 39) &amp; 0x1F;</div><div class="line">        <span class="built_in">return</span> color;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    //样式（类别）</div><div class="line">    public long <span class="function"><span class="title">getCloStyle</span></span>() &#123;</div><div class="line">        long style = (clothInfo &gt;&gt; 33) &amp; 0x3F;</div><div class="line">        <span class="built_in">return</span> style;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    //规格</div><div class="line">    public long <span class="function"><span class="title">getCloSpec</span></span>() &#123;</div><div class="line">        long spec = (clothInfo &gt;&gt; 28) &amp; 0x1F;</div><div class="line">        <span class="built_in">return</span> spec;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    //品牌</div><div class="line">    public long <span class="function"><span class="title">getCloBrand</span></span>() &#123;</div><div class="line">        long brand = (clothInfo &gt;&gt; 16) &amp; 0xcF;</div><div class="line">        <span class="built_in">return</span> brand;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public static class AnalysisClo &#123;</div><div class="line">        long material;</div><div class="line">        long color;</div><div class="line">        long style;</div><div class="line">        long spec;</div><div class="line">        long brand;</div><div class="line"></div><div class="line">        public AnalysisClo(long material, long color, long style, long spec, long brand) &#123;</div><div class="line">            this.material = material;</div><div class="line">            this.color = color;</div><div class="line">            this.style = style;</div><div class="line">            this.spec = spec;</div><div class="line">            this.brand = brand;</div><div class="line">        &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h5 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h5><p><a href="http://www.runoob.com/java/java-basic-datatypes.html" target="_blank" rel="external">http://www.runoob.com/java/java-basic-datatypes.html</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://ZQiang94.github.io/2017/05/26/README18/" data-id="cj35msp7g0000bwll8qrghnws" class="article-share-link">分享</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/05/10/README17/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          WebView-APIs
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+ 
+     
+  <div class="comments" id="comments">
+    
+     
+       
+      <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+    
+  </div>
+ 
+  
+
+</section>
+           
+    <aside id="sidebar">
+  
+    
+
+  
+    
+    <div class="widget-wrap">
+    
+      <div class="widget" id="toc-widget-fixed">
+      
+        <strong class="toc-title">文章目录</strong>
+        <div class="toc-widget-list">
+              <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#byte："><span class="toc-number">1.</span> <span class="toc-text">byte：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#short："><span class="toc-number">2.</span> <span class="toc-text">short：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#int："><span class="toc-number">3.</span> <span class="toc-text">int：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#long："><span class="toc-number">4.</span> <span class="toc-text">long：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#float："><span class="toc-number">5.</span> <span class="toc-text">float：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#double："><span class="toc-number">6.</span> <span class="toc-text">double：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#boolean："><span class="toc-number">7.</span> <span class="toc-text">boolean：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#char："><span class="toc-number">8.</span> <span class="toc-text">char：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#解析类"><span class="toc-number">9.</span> <span class="toc-text">解析类</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#参考链接"><span class="toc-number">10.</span> <span class="toc-text">参考链接</span></a></li></ol>
+          </div>
+      </div>
+    </div>
+
+  
+    
+
+  
+    
+  
+    
+  
+    
+
+  
+    
+  
+    <!--微信公众号二维码-->
+
+
+  
+</aside>
+
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-left">
+      &copy; 2016 - 2017 ZQiang94&nbsp;|&nbsp;
+      主题 <a href="https://github.com/giscafer/hexo-theme-cafe/" target="_blank">Cafe</a>
+    </div>
+	<div id="footer-center">
+		<span id="busuanzi_container_site_pv">
+		本站总访问量<span id="busuanzi_value_site_pv"></span>次
+		</span>
+	</div>
+     <div id="footer-right">
+      联系方式&nbsp;|&nbsp;zhangqiang452608069@gmail.com
+    </div>
+  </div>
+</footer>
+ <script src="/jquery/jquery.min.js"></script>
+ <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/about" class="mobile-nav-link">关于</a>
+  
+</nav>
+    <img class="back-to-top-btn" src="/images/fly-to-top.png"/>
+<script>
+// Elevator script included on the page, already.
+window.onload = function() {
+  var elevator = new Elevator({
+    selector:'.back-to-top-btn',
+    element: document.querySelector('.back-to-top-btn'),
+    duration: 1000 // milliseconds
+  });
+}
+</script>
+      
+
+  
+    <script>
+      var cloudTieConfig = {
+        url: document.location.href, 
+        sourceId: "",
+        productKey: "e2fb4051c49842xxce669e634bc983f",
+        target: "cloud-tie-wrapper"
+      };
+    </script>
+    <script src="https://img1.ws.126.net/f2e/tie/yun/sdk/loader.js"></script>
+    
+
+  
+
+
+
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      })
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      })
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+ <script src="/js/is.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+<script src="/js/elevator.js"></script>
+  </div>
+</body>
+</html>
+
+<a href="https://github.com/ZQiang94"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
