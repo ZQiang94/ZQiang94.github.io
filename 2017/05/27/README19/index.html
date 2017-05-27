@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Android Studio修改.gradle目录路径 | ZQiang94</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="三个目录Android Studio安装成功之后，在系统盘的用户目录下产生三个目录，如下。123.android/.AndroidStudio VersionCode/.gradle 三个文件夹占用系统盘，可以把这三个文件夹移动到另一个盘符中，三个文件中的主要内容如下。">
+<meta name="keywords">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android Studio修改.gradle目录路径">
+<meta property="og:url" content="http://ZQiang94.github.io/2017/05/27/README19/index.html">
+<meta property="og:site_name" content="ZQiang94">
+<meta property="og:description" content="三个目录Android Studio安装成功之后，在系统盘的用户目录下产生三个目录，如下。123.android/.AndroidStudio VersionCode/.gradle 三个文件夹占用系统盘，可以把这三个文件夹移动到另一个盘符中，三个文件中的主要内容如下。">
+<meta property="og:image" content="http://zqiang94.github.io/assets/readme19/img0.png">
+<meta property="og:image" content="http://zqiang94.github.io/assets/readme19/img1.png">
+<meta property="og:image" content="http://zqiang94.github.io/assets/readme19/img2.png">
+<meta property="og:image" content="http://zqiang94.github.io/assets/readme19/img3.png">
+<meta property="og:image" content="http://zqiang94.github.io/assets/readme19/img4.png">
+<meta property="og:image" content="http://zqiang94.github.io/assets/readme19/img5.png">
+<meta property="og:image" content="http://zqiang94.github.io/assets/readme19/img6.png">
+<meta property="og:updated_time" content="2017-05-27T07:03:08.199Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Android Studio修改.gradle目录路径">
+<meta name="twitter:description" content="三个目录Android Studio安装成功之后，在系统盘的用户目录下产生三个目录，如下。123.android/.AndroidStudio VersionCode/.gradle 三个文件夹占用系统盘，可以把这三个文件夹移动到另一个盘符中，三个文件中的主要内容如下。">
+<meta name="twitter:image" content="http://zqiang94.github.io/assets/readme19/img0.png">
+  
+    <link rel="alternate" href="/atom.xml" title="ZQiang94" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    
+    <div id="header-inner" class="inner">
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://ZQiang94.github.io"></form>
+      </div>
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">首页</a>
+        
+          <a class="main-nav-link" href="/archives">归档</a>
+        
+          <a class="main-nav-link" href="/about">关于</a>
+        
+      </nav>
+      
+    </div>
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">ZQiang94</a>
+      </h1>
+      
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-README19" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/05/27/README19/" class="article-date">
+  <time datetime="2017-05-26T16:00:00.000Z" itemprop="datePublished">2017-05-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Android Studio修改.gradle目录路径
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Table of Contents -->
+        
+        <h4 id="三个目录"><a href="#三个目录" class="headerlink" title="三个目录"></a>三个目录</h4><p>Android Studio安装成功之后，在系统盘的用户目录下产生三个目录，如下。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">.android/</div><div class="line">.AndroidStudio VersionCode/</div><div class="line">.gradle</div></pre></td></tr></table></figure></p>
+<p>三个文件夹占用系统盘，可以把这三个文件夹移动到另一个盘符中，三个文件中的主要内容如下。<br><a id="more"></a><br><img src="/assets/readme19/img0.png" alt=""></p>
+<h5 id="android"><a href="#android" class="headerlink" title=".android/"></a>.android/</h5><p>这个文件夹内存放的是我们创建的模拟器、产生buildeCache等文件<br><img src="/assets/readme19/img1.png" alt=""></p>
+<h5 id="AndroidStudio-VersionCode"><a href="#AndroidStudio-VersionCode" class="headerlink" title=".AndroidStudio VersionCode/"></a>.AndroidStudio VersionCode/</h5><p>这个文件夹中存放的主要AS相关的配置和插件等，内容如图。<br><img src="/assets/readme19/img2.png" alt=""></p>
+<h5 id="gradle"><a href="#gradle" class="headerlink" title=".gradle"></a>.gradle</h5><p>这个文件夹是构建工具 Gradle的配置文件夹，也会存储一些项目的构建缓存信息，如图<br><img src="/assets/readme19/img3.png" alt=""></p>
+<h5 id="大小"><a href="#大小" class="headerlink" title="大小"></a>大小</h5><p>以上三个文件夹占了我系统盘12.6G<br><img src="/assets/readme19/img4.png" alt=""></p>
+<h4 id="移动路径"><a href="#移动路径" class="headerlink" title="移动路径"></a>移动路径</h4><p>在进行以下修改前，先把之前的配置目录拷贝到新的路径，这样之前的配置就不会丢失。</p>
+<h5 id="Android"><a href="#Android" class="headerlink" title=".Android/"></a>.Android/</h5><p>这个文件夹中最占大小的是avd，其实google提供的虚拟机真心有点卡，推荐夜神模拟器！<br>环境变量中新建 ANDROID_SDK_HOME， 添加好环境变量后到新的路径下修改下相应的.ini文件内的路径信息，然后重启系统生效。<br><img src="/assets/readme19/img5.png" alt=""></p>
+<h5 id="AndroidStudio-VersionCode-1"><a href="#AndroidStudio-VersionCode-1" class="headerlink" title=".AndroidStudio VersionCode/"></a>.AndroidStudio VersionCode/</h5><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">#---------------------------------------------------------------------</div><div class="line"># Uncomment this option if you want to customize path to IDE config folder. Make sure you're using forward slashes.</div><div class="line">#---------------------------------------------------------------------</div><div class="line"># 将path后面的路径修该为移动后的新路径</div><div class="line">idea.config.path=$&#123;user.home&#125;/.AndroidStudioPreview/config</div><div class="line"></div><div class="line">#---------------------------------------------------------------------</div><div class="line"># Uncomment this option if you want to customize path to IDE system folder. Make sure you're using forward slashes.</div><div class="line">#---------------------------------------------------------------------</div><div class="line"># 将path后面的路径修该为新路径</div><div class="line">idea.system.path=$&#123;user.home&#125;/.AndroidStudioPreview/system</div></pre></td></tr></table></figure>
+<h5 id="gradle-1"><a href="#gradle-1" class="headerlink" title=".gradle/"></a>.gradle/</h5><p>直接修改AS中配置即可。<br><img src="/assets/readme19/img6.png" alt=""></p>
+<h4 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h4>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://ZQiang94.github.io/2017/05/27/README19/" data-id="cj36xj24t0000dcllkmr14rzi" class="article-share-link">分享</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/05/26/README18/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          字节与进制
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+ 
+     
+  <div class="comments" id="comments">
+    
+     
+       
+      <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+    
+  </div>
+ 
+  
+
+</section>
+           
+    <aside id="sidebar">
+  
+    
+
+  
+    
+    <div class="widget-wrap">
+    
+      <div class="widget" id="toc-widget-fixed">
+      
+        <strong class="toc-title">文章目录</strong>
+        <div class="toc-widget-list">
+              <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#三个目录"><span class="toc-number">1.</span> <span class="toc-text">三个目录</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#android"><span class="toc-number">1.1.</span> <span class="toc-text">.android/</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#AndroidStudio-VersionCode"><span class="toc-number">1.2.</span> <span class="toc-text">.AndroidStudio VersionCode/</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#gradle"><span class="toc-number">1.3.</span> <span class="toc-text">.gradle</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#大小"><span class="toc-number">1.4.</span> <span class="toc-text">大小</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#移动路径"><span class="toc-number">2.</span> <span class="toc-text">移动路径</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Android"><span class="toc-number">2.1.</span> <span class="toc-text">.Android/</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#AndroidStudio-VersionCode-1"><span class="toc-number">2.2.</span> <span class="toc-text">.AndroidStudio VersionCode/</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#gradle-1"><span class="toc-number">2.3.</span> <span class="toc-text">.gradle/</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#参考链接"><span class="toc-number">3.</span> <span class="toc-text">参考链接</span></a></li></ol>
+          </div>
+      </div>
+    </div>
+
+  
+    
+
+  
+    
+  
+    
+  
+    
+
+  
+    
+  
+    <!--微信公众号二维码-->
+
+
+  
+</aside>
+
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-left">
+      &copy; 2016 - 2017 ZQiang94&nbsp;|&nbsp;
+      主题 <a href="https://github.com/giscafer/hexo-theme-cafe/" target="_blank">Cafe</a>
+    </div>
+	<div id="footer-center">
+		<span id="busuanzi_container_site_pv">
+		本站总访问量<span id="busuanzi_value_site_pv"></span>次
+		</span>
+	</div>
+     <div id="footer-right">
+      联系方式&nbsp;|&nbsp;zhangqiang452608069@gmail.com
+    </div>
+  </div>
+</footer>
+ <script src="/jquery/jquery.min.js"></script>
+ <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/about" class="mobile-nav-link">关于</a>
+  
+</nav>
+    <img class="back-to-top-btn" src="/images/fly-to-top.png"/>
+<script>
+// Elevator script included on the page, already.
+window.onload = function() {
+  var elevator = new Elevator({
+    selector:'.back-to-top-btn',
+    element: document.querySelector('.back-to-top-btn'),
+    duration: 1000 // milliseconds
+  });
+}
+</script>
+      
+
+  
+    <script>
+      var cloudTieConfig = {
+        url: document.location.href, 
+        sourceId: "",
+        productKey: "e2fb4051c49842xxce669e634bc983f",
+        target: "cloud-tie-wrapper"
+      };
+    </script>
+    <script src="https://img1.ws.126.net/f2e/tie/yun/sdk/loader.js"></script>
+    
+
+  
+
+
+
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      })
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      })
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+ <script src="/js/is.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+<script src="/js/elevator.js"></script>
+  </div>
+</body>
+</html>
+
+<a href="https://github.com/ZQiang94"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
