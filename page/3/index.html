@@ -3,22 +3,14 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Exception-android.view.WindowLeaked | ZQiang94</title>
+  <title>ZQiang94</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1WindowManager(24325): android.view.WindowLeaked: Activity com.haier.uhome.wash.ui.activity.WashServiceAllActivity has leaked window android.widget.ZoomButtonsController$Container&amp;#123;42915d48 V.E...">
-<meta name="keywords">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Exception-android.view.WindowLeaked">
-<meta property="og:url" content="http://ZQiang94.github.io/2017/04/27/README11/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="ZQiang94">
+<meta property="og:url" content="http://ZQiang94.github.io/page/3/index.html">
 <meta property="og:site_name" content="ZQiang94">
-<meta property="og:description" content="1WindowManager(24325): android.view.WindowLeaked: Activity com.haier.uhome.wash.ui.activity.WashServiceAllActivity has leaked window android.widget.ZoomButtonsController$Container&amp;#123;42915d48 V.E...">
-<meta property="og:image" content="http://zqiang94.github.io/assets/readme11/img0.png">
-<meta property="og:image" content="http://zqiang94.github.io/assets/readme11/img1.png">
-<meta property="og:updated_time" content="2017-05-12T07:59:43.740Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Exception-android.view.WindowLeaked">
-<meta name="twitter:description" content="1WindowManager(24325): android.view.WindowLeaked: Activity com.haier.uhome.wash.ui.activity.WashServiceAllActivity has leaked window android.widget.ZoomButtonsController$Container&amp;#123;42915d48 V.E...">
-<meta name="twitter:image" content="http://zqiang94.github.io/assets/readme11/img0.png">
+<meta name="twitter:title" content="ZQiang94">
   
     <link rel="alternate" href="/atom.xml" title="ZQiang94" type="application/atom+xml">
   
@@ -71,10 +63,12 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-README11" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main">
+  
+    <article id="post-README0" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/04/27/README11/" class="article-date">
-  <time datetime="2017-04-26T16:00:00.000Z" itemprop="datePublished">2017-04-27</time>
+    <a href="/2017/03/25/README0/" class="article-date">
+  <time datetime="2017-03-24T16:00:00.000Z" itemprop="datePublished">2017-03-25</time>
 </a>
     
   </div>
@@ -84,8 +78,8 @@
       <header class="article-header">
         
   
-    <h1 class="article-title" itemprop="name">
-      Exception-android.view.WindowLeaked
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/25/README0/">Git Common Cmds</a>
     </h1>
   
 
@@ -93,59 +87,34 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <!-- Table of Contents -->
-        
-        <p><img src="/assets/readme11/img0.png" alt=""><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">WindowManager(24325): android.view.WindowLeaked: Activity com.haier.uhome.wash.ui.activity.WashServiceAllActivity has leaked window android.widget.ZoomButtonsController<span class="variable">$Container</span>&#123;42915d48 V.E..... ......I. 0,0-720,97&#125; that was originally added here</div></pre></td></tr></table></figure></p>
-<a id="more"></a>
-<p>这个窗口泄漏问题是因为WebView自带的缩放按钮（如下图），因为这个在消失过程中是一个渐变的效果，如果这个时候调用了父容器的onDestory()方法后，就会导致WindowLeaked。</p>
-<p><img src="/assets/readme11/img1.png" alt=""></p>
-<p>知道原因后，有相应的处理方式：<br>如果要求必须带有这个原生控件中自带的缩放按钮，那就可以在调用度容器destory之前，让这个带有渐变效果的按钮立马消失。处理代码如下：<br> @Override<br>    public void finish() {<br>        ViewGroup view = (ViewGroup) getWindow().getDecorView();<br>        view.removeAllViews();<br>        super.finish();<br>    }</p>
-<p>如果允许不显示该缩放控件，就可以在初始化WebView的时候，将该属性设置为不显示缩放按钮。</p>
+        <div align=center><img src="https://dn-myg6wstv.qbox.me/fea7461e85aee80bbe96.png"/></div>
 
+<h3 id="常用"><a href="#常用" class="headerlink" title="常用"></a>常用</h3><p>提交代码<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">git status //查看工作区相比于暂存区有改动的文件</div><div class="line"></div><div class="line">git diff //查看具体改动文件内容</div><div class="line"></div><div class="line">git add . /git add file某个文件 //将工作区的改动添加到暂存区</div><div class="line"></div><div class="line">git commit –m “desc 描述” //添加注释并将暂存区所有改动提交到当前分支</div><div class="line"></div><div class="line">git push origin HEAD:refs/<span class="keyword">for</span>/develop //推送本地develop分支到远程origin/develop分支</div></pre></td></tr></table></figure></p>
+        
+          <p class="article-more-link">
+            <a href="/2017/03/25/README0/#more">继续阅读全文 »</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://ZQiang94.github.io/2017/04/27/README11/" data-id="cj203ccp2000108llv0kx55oa" class="article-share-link">分享</a>
+      <a data-url="http://ZQiang94.github.io/2017/03/25/README0/" data-id="cj2011x300000o0llt2jdpc4q" class="article-share-link">分享</a>
       
       
       
     </footer>
   </div>
   
-    
-<nav id="article-nav">
-  
-    <a href="/2017/04/25/README10/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">上一篇</strong>
-      <div class="article-nav-title">
-        
-          Exception-WebView.destroy() called while still attached
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2017/04/29/README12/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">下一篇</strong>
-      <div class="article-nav-title">Exception-getDrawable java.lang.NoSuchMethodError</div>
-    </a>
-  
-</nav>
-
-  
 </article>
  
-     
-  <div class="comments" id="comments">
-    
-     
-       
-      <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
-    
-  </div>
- 
+
+
   
 
+
+  <nav id="page-nav">
+    <a class="extend prev" rel="prev" href="/page/2/">&laquo; 上一页</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
+  </nav>
 </section>
            
     <aside id="sidebar">

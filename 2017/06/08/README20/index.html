@@ -3,22 +3,23 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Exception-android.view.WindowLeaked | ZQiang94</title>
+  <title>常用在线工具 | ZQiang94</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1WindowManager(24325): android.view.WindowLeaked: Activity com.haier.uhome.wash.ui.activity.WashServiceAllActivity has leaked window android.widget.ZoomButtonsController$Container&amp;#123;42915d48 V.E...">
+  <meta name="description" content="angrytools这是一个强大的在线工具站eg.http://angrytools.com/android/button/">
 <meta name="keywords">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Exception-android.view.WindowLeaked">
-<meta property="og:url" content="http://ZQiang94.github.io/2017/04/27/README11/index.html">
+<meta property="og:title" content="常用在线工具">
+<meta property="og:url" content="http://ZQiang94.github.io/2017/06/08/README20/index.html">
 <meta property="og:site_name" content="ZQiang94">
-<meta property="og:description" content="1WindowManager(24325): android.view.WindowLeaked: Activity com.haier.uhome.wash.ui.activity.WashServiceAllActivity has leaked window android.widget.ZoomButtonsController$Container&amp;#123;42915d48 V.E...">
-<meta property="og:image" content="http://zqiang94.github.io/assets/readme11/img0.png">
-<meta property="og:image" content="http://zqiang94.github.io/assets/readme11/img1.png">
-<meta property="og:updated_time" content="2017-05-12T07:59:43.740Z">
+<meta property="og:description" content="angrytools这是一个强大的在线工具站eg.http://angrytools.com/android/button/">
+<meta property="og:image" content="http://zqiang94.github.io/assets/readme20/img0.png">
+<meta property="og:image" content="http://zqiang94.github.io/assets/readme20/img1.png">
+<meta property="og:image" content="http://zqiang94.github.io/assets/readme20/img2.png">
+<meta property="og:updated_time" content="2017-06-08T10:09:35.445Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Exception-android.view.WindowLeaked">
-<meta name="twitter:description" content="1WindowManager(24325): android.view.WindowLeaked: Activity com.haier.uhome.wash.ui.activity.WashServiceAllActivity has leaked window android.widget.ZoomButtonsController$Container&amp;#123;42915d48 V.E...">
-<meta name="twitter:image" content="http://zqiang94.github.io/assets/readme11/img0.png">
+<meta name="twitter:title" content="常用在线工具">
+<meta name="twitter:description" content="angrytools这是一个强大的在线工具站eg.http://angrytools.com/android/button/">
+<meta name="twitter:image" content="http://zqiang94.github.io/assets/readme20/img0.png">
   
     <link rel="alternate" href="/atom.xml" title="ZQiang94" type="application/atom+xml">
   
@@ -71,10 +72,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-README11" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-README20" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/04/27/README11/" class="article-date">
-  <time datetime="2017-04-26T16:00:00.000Z" itemprop="datePublished">2017-04-27</time>
+    <a href="/2017/06/08/README20/" class="article-date">
+  <time datetime="2017-06-07T16:00:00.000Z" itemprop="datePublished">2017-06-08</time>
 </a>
     
   </div>
@@ -85,7 +86,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Exception-android.view.WindowLeaked
+      常用在线工具
     </h1>
   
 
@@ -95,17 +96,14 @@
       
         <!-- Table of Contents -->
         
-        <p><img src="/assets/readme11/img0.png" alt=""><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">WindowManager(24325): android.view.WindowLeaked: Activity com.haier.uhome.wash.ui.activity.WashServiceAllActivity has leaked window android.widget.ZoomButtonsController<span class="variable">$Container</span>&#123;42915d48 V.E..... ......I. 0,0-720,97&#125; that was originally added here</div></pre></td></tr></table></figure></p>
-<a id="more"></a>
-<p>这个窗口泄漏问题是因为WebView自带的缩放按钮（如下图），因为这个在消失过程中是一个渐变的效果，如果这个时候调用了父容器的onDestory()方法后，就会导致WindowLeaked。</p>
-<p><img src="/assets/readme11/img1.png" alt=""></p>
-<p>知道原因后，有相应的处理方式：<br>如果要求必须带有这个原生控件中自带的缩放按钮，那就可以在调用度容器destory之前，让这个带有渐变效果的按钮立马消失。处理代码如下：<br> @Override<br>    public void finish() {<br>        ViewGroup view = (ViewGroup) getWindow().getDecorView();<br>        view.removeAllViews();<br>        super.finish();<br>    }</p>
-<p>如果允许不显示该缩放控件，就可以在初始化WebView的时候，将该属性设置为不显示缩放按钮。</p>
-
+        <h4 id="angrytools"><a href="#angrytools" class="headerlink" title="angrytools"></a><a href="http://angrytools.com" target="_blank" rel="external">angrytools</a></h4><p>这是一个强大的在线工具站<br>eg.<a href="http://angrytools.com/android/button/" target="_blank" rel="external">http://angrytools.com/android/button/</a><br><img src="/assets/readme20/img0.png" alt=""><br><a id="more"></a></p>
+<h4 id="正则在线工具"><a href="#正则在线工具" class="headerlink" title="正则在线工具"></a><a href="http://tool.lu/regex/" target="_blank" rel="external">正则在线工具</a></h4><h4 id="px-dp在线转换工具"><a href="#px-dp在线转换工具" class="headerlink" title="px/dp在线转换工具"></a><a href="http://labs.rampinteractive.co.uk/android_dp_px_calculator/" target="_blank" rel="external">px/dp在线转换工具</a></h4><p>具体场景参考：<a href="http://www.tuicool.com/articles/uiyiair" target="_blank" rel="external">http://www.tuicool.com/articles/uiyiair</a></p>
+<h4 id="Android-Shapes-Generator"><a href="#Android-Shapes-Generator" class="headerlink" title="Android Shapes Generator"></a><a href="http://shapes.softartstudio.com/" target="_blank" rel="external">Android Shapes Generator</a></h4><p><img src="/assets/readme20/img1.png" alt=""><br><img src="/assets/readme20/img2.png" alt=""></p>
+<h4 id="阿里矢量图库"><a href="#阿里矢量图库" class="headerlink" title="阿里矢量图库"></a><a href="http://www.iconfont.cn/" target="_blank" rel="external">阿里矢量图库</a></h4><h4 id="开源镜像站"><a href="#开源镜像站" class="headerlink" title="开源镜像站"></a><a href="http://mirrors.neusoft.edu.cn/" target="_blank" rel="external">开源镜像站</a></h4>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://ZQiang94.github.io/2017/04/27/README11/" data-id="cj203ccp2000108llv0kx55oa" class="article-share-link">分享</a>
+      <a data-url="http://ZQiang94.github.io/2017/06/08/README20/" data-id="cj3o9diub00000kllvny39vd4" class="article-share-link">分享</a>
       
       
       
@@ -115,20 +113,15 @@
     
 <nav id="article-nav">
   
-    <a href="/2017/04/25/README10/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/05/27/README19/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">上一篇</strong>
       <div class="article-nav-title">
         
-          Exception-WebView.destroy() called while still attached
+          Android Studio修改.gradle目录路径
         
       </div>
     </a>
   
-  
-    <a href="/2017/04/29/README12/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">下一篇</strong>
-      <div class="article-nav-title">Exception-getDrawable java.lang.NoSuchMethodError</div>
-    </a>
   
 </nav>
 
@@ -154,42 +147,24 @@
 
   
     
-  
+    <div class="widget-wrap">
     
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title recent-posts">最新文章</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2017/06/08/README20/">常用在线工具</a>
-          </li>
-        
-          <li>
-            <a href="/2017/05/27/README19/">Android Studio修改.gradle目录路径</a>
-          </li>
-        
-          <li>
-            <a href="/2017/05/26/README18/">字节与进制</a>
-          </li>
-        
-          <li>
-            <a href="/2017/05/10/README17/">WebView-APIs</a>
-          </li>
-        
-          <li>
-            <a href="/2017/05/10/README13/">WebView-js与native的交互</a>
-          </li>
-        
-      </ul>
+      <div class="widget" id="toc-widget-fixed">
+      
+        <strong class="toc-title">文章目录</strong>
+        <div class="toc-widget-list">
+              <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#angrytools"><span class="toc-number">1.</span> <span class="toc-text">angrytools</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#正则在线工具"><span class="toc-number">2.</span> <span class="toc-text">正则在线工具</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#px-dp在线转换工具"><span class="toc-number">3.</span> <span class="toc-text">px/dp在线转换工具</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Android-Shapes-Generator"><span class="toc-number">4.</span> <span class="toc-text">Android Shapes Generator</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#阿里矢量图库"><span class="toc-number">5.</span> <span class="toc-text">阿里矢量图库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#开源镜像站"><span class="toc-number">6.</span> <span class="toc-text">开源镜像站</span></a></li></ol>
+          </div>
+      </div>
     </div>
-  </div>
 
+  
+    
+
+  
+    
+  
+    
   
     
 

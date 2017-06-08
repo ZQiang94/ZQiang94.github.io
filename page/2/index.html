@@ -65,6 +65,50 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-README10" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/04/25/README10/" class="article-date">
+  <time datetime="2017-04-24T16:00:00.000Z" itemprop="datePublished">2017-04-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/04/25/README10/">Exception-WebView.destroy() called while still attached</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="Exception"><a href="#Exception" class="headerlink" title="Exception"></a>Exception</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">webview: java.lang.Throwable: Error: WebView.destroy() called <span class="keyword">while</span> still attached!at android.webkit.WebViewClassic.destroy(WebViewClassic.java:2203)</div><div class="line">at android.webkit.WebView.destroy(WebView.java:683)</div></pre></td></tr></table></figure>
+<p>拥有webview的Activity在finish()时，会有异常输出：WebView.destroy() called while still attached!<br>
+        
+          <p class="article-more-link">
+            <a href="/2017/04/25/README10/#more">继续阅读全文 »</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://ZQiang94.github.io/2017/04/25/README10/" data-id="cj203ccos000008llr8hp99qd" class="article-share-link">分享</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+ 
+
+
+  
     <article id="post-README9" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/04/20/README9/" class="article-date">
@@ -458,55 +502,10 @@
 
 
   
-    <article id="post-README0" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/03/25/README0/" class="article-date">
-  <time datetime="2017-03-24T16:00:00.000Z" itemprop="datePublished">2017-03-25</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/25/README0/">Git Common Cmds</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <div align=center><img src="https://dn-myg6wstv.qbox.me/fea7461e85aee80bbe96.png"/></div>
-
-<h3 id="常用"><a href="#常用" class="headerlink" title="常用"></a>常用</h3><p>提交代码<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">git status //查看工作区相比于暂存区有改动的文件</div><div class="line"></div><div class="line">git diff //查看具体改动文件内容</div><div class="line"></div><div class="line">git add . /git add file某个文件 //将工作区的改动添加到暂存区</div><div class="line"></div><div class="line">git commit –m “desc 描述” //添加注释并将暂存区所有改动提交到当前分支</div><div class="line"></div><div class="line">git push origin HEAD:refs/<span class="keyword">for</span>/develop //推送本地develop分支到远程origin/develop分支</div></pre></td></tr></table></figure></p>
-        
-          <p class="article-more-link">
-            <a href="/2017/03/25/README0/#more">继续阅读全文 »</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://ZQiang94.github.io/2017/03/25/README0/" data-id="cj2011x300000o0llt2jdpc4q" class="article-share-link">分享</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
- 
-
-
-  
 
 
   <nav id="page-nav">
-    <a class="extend prev" rel="prev" href="/">&laquo; 上一页</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    <a class="extend prev" rel="prev" href="/">&laquo; 上一页</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">下一页&raquo;</a>
   </nav>
 </section>
            
@@ -529,6 +528,10 @@
       <ul>
         
           <li>
+            <a href="/2017/06/08/README20/">常用在线工具</a>
+          </li>
+        
+          <li>
             <a href="/2017/05/27/README19/">Android Studio修改.gradle目录路径</a>
           </li>
         
@@ -542,10 +545,6 @@
         
           <li>
             <a href="/2017/05/10/README13/">WebView-js与native的交互</a>
-          </li>
-        
-          <li>
-            <a href="/2017/05/05/README16/">SDK目录讲解</a>
           </li>
         
       </ul>
