@@ -17,14 +17,13 @@
 <meta property="og:image" content="http://zqiang94.github.io/assets/readme15/img2.png">
 <meta property="og:image" content="http://zqiang94.github.io/assets/readme15/img3.png">
 <meta property="og:image" content="http://zqiang94.github.io/assets/readme15/img4.png">
-<meta property="og:image" content="http://zqiang94.github.io/assets/readme15/img5.png">
 <meta property="og:image" content="http://zqiang94.github.io/assets/readme15/img6.png">
 <meta property="og:image" content="http://zqiang94.github.io/assets/readme15/img7.png">
 <meta property="og:image" content="http://zqiang94.github.io/assets/readme15/img8.png">
 <meta property="og:image" content="http://zqiang94.github.io/assets/readme15/img9.png">
 <meta property="og:image" content="http://zqiang94.github.io/assets/readme15/img10.jpg">
 <meta property="og:image" content="http://zqiang94.github.io/assets/readme15/img11.png">
-<meta property="og:updated_time" content="2017-05-12T08:00:31.250Z">
+<meta property="og:updated_time" content="2017-06-16T03:01:02.095Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="UML类图">
 <meta name="twitter:description" content="类图中常见的几种关系分别为：泛化（Generalization）类的继承结构在UML中的表现为两种关系，继承与实现；继承关系为is-a的关系，两个对象之间如果可以用is-a来表现，就是继承关系：">
@@ -55,7 +54,7 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://ZQiang94.github.io"></form>
@@ -107,9 +106,9 @@
         
         <h3 id="类图中常见的几种关系分别为："><a href="#类图中常见的几种关系分别为：" class="headerlink" title="类图中常见的几种关系分别为："></a>类图中常见的几种关系分别为：</h3><h4 id="泛化（Generalization）"><a href="#泛化（Generalization）" class="headerlink" title="泛化（Generalization）"></a>泛化（Generalization）</h4><p>类的继承结构在UML中的表现为两种关系，继承与实现；<br>继承关系为is-a的关系，两个对象之间如果可以用is-a来表现，就是继承关系：<br><a id="more"></a><br>eg:自行车是车，狗是动物<br>泛化关系可以用带空心箭头的实线表示，如下图，A继承自B<br><img src="/assets/readme15/img0.png" alt=""><br>eg：汽车在现实中有实现，可用汽车定义具体的对象；汽车与SUV之间就是泛化关系。<br><img src="/assets/readme15/img1.png" alt=""></p>
 <p>最终代码中，泛化表示继承非抽象类</p>
-<h4 id="实现（Realization）"><a href="#实现（Realization）" class="headerlink" title="实现（Realization）"></a>实现（Realization）</h4><p>实现关系用一条带空心箭头的虚线表示；<br>eg：“车”是一个抽象的概念，在现实中无法来定义对象，只有指明具体的子类（汽车还是自行车），才能来定义对象<br><img src="/assets/readme15/img2.png" alt=""><br>最终代码中，实现关系表现为继承抽象类<br><img src="/assets/readme15/img3.png" alt=""></p>
-<h4 id="关联（Assocition）"><a href="#关联（Assocition）" class="headerlink" title="关联（Assocition）"></a>关联（Assocition）</h4><p>关联关系就用一条箭头的实线来表示，箭头指向被关联类，可以为单向也可以是双向箭头；<br>eg：客户类与订单类之间就是关联关系<br><img src="/assets/readme15/img4.png" alt=""></p>
-<p>关联关系默认不强调方向（也上最上图中学生与身份证之间没有用箭头的原因），如果特别强调方向，如下图，表示A知道B，但是B不知道A；<br><img src="/assets/readme15/img5.png" alt=""></p>
+<h4 id="实现（Realization）"><a href="#实现（Realization）" class="headerlink" title="实现（Realization）"></a>实现（Realization）</h4><p>实现关系用一条带空心箭头的虚线表示；<br>eg：“车”是一个抽象的概念，在现实中无法来定义对象，只有指明具体的子类（汽车还是自行车），才能来定义对象<br><img src="/assets/readme15/img2.png" alt=""><br>最终代码中，实现关系表现为继承抽象类</p>
+<h4 id="关联（Assocition）"><a href="#关联（Assocition）" class="headerlink" title="关联（Assocition）"></a>关联（Assocition）</h4><p>关联关系就用一条箭头的实线来表示，箭头指向被关联类，可以为单向也可以是双向箭头；<br>eg：客户类与订单类之间就是关联关系<br><img src="/assets/readme15/img3.png" alt=""></p>
+<p>关联关系默认不强调方向（也是最上图中学生与身份证之间没有用箭头的原因），如果特别强调方向，如下图，表示A知道B，但是B不知道A；<br><img src="/assets/readme15/img4.png" alt=""></p>
 <p>最终代码中，关联对象通常是以成员变量的形式实现的</p>
 <h4 id="聚合（Aggregation）"><a href="#聚合（Aggregation）" class="headerlink" title="聚合（Aggregation）"></a>聚合（Aggregation）</h4><p>表示has-a的关系，是一种不稳定的包含关系。较强于一般关联，有整体和局部的关系，并且没有了整体，局部也可单独存在。如公司与部门之间的关系，公司没有了，部门也就没有了，用一个带空心菱形的箭头表示，菱形从局部指向整体，如下图。<br><img src="/assets/readme15/img6.png" alt=""></p>
 <p>如下图，可以说是A聚合到B上，或者说是B由A组成；<br><img src="/assets/readme15/img7.png" alt=""></p>
@@ -117,7 +116,8 @@
 <p>与组合关系不用的是：<br>整体和部门不是强依赖的，即使整体不存在了，部分也存在，例如，公司没有了，部门也就没有了，但是员工还在。</p>
 <h4 id="组合（Composition）"><a href="#组合（Composition）" class="headerlink" title="组合（Composition）"></a>组合（Composition）</h4><p>contains-a是一种强烈的包含关系，组合类负责被组合类的生命周期，是一种更强的聚合关系，部分不能脱离整体存在，部分不能脱离整体存在，用带实现箭头的实线来表示，菱形从局部指向整体。<br>如公司和部门的关系，没有了公司，部门也不能存在了；调查问卷中问题和选项的关系；订单和订单选项的关系。<br><img src="/assets/readme15/img8.png" alt=""><br>如下图表示A组成B，或者B由A组成；<br><img src="/assets/readme15/img9.png" alt=""></p>
 <h4 id="依赖（Dependency）"><a href="#依赖（Dependency）" class="headerlink" title="依赖（Dependency）"></a>依赖（Dependency）</h4><p>依赖关系是用一套带箭头的虚线表示的；如下图表示A依赖于B；他描述一个对象在运行期间会用到另一个对象的关系<br><img src="/assets/readme15/img10.jpg" alt=""><br>与关联关系不同的是，它是一种临时性的关系，通常在运行期间产生，并且随着运行时的变化； 依赖关系也可能发生变化；<br>显然，依赖也有方向，双向依赖是一种非常糟糕的结构，我们总是应该保持单向依赖，杜绝双向依赖的产生；</p>
-<p>注：在最终代码中，依赖关系体现为类构造方法及类方法的传入参数，箭头的指向为调用关系；依赖关系除了临时知道对方外，还是“使用”对方的方法和属性；<br><img src="/assets/readme15/img11.png" alt=""></p>
+<p>注：在最终代码中，依赖关系体现为类构造方法及类方法的传入参数，箭头的指向为调用关系；依赖关系除了临时知道对方外，还是“使用”对方的方法和属性；</p>
+<h4 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h4><p><img src="/assets/readme15/img11.png" alt=""></p>
 <pre><code>* 车的类图结构为&lt;&lt;abstract&gt;&gt;，表示车是一个抽象类；
 * 它有两个继承类：小汽车和自行车；它们之间的关系为实现关系，使用带空心箭头的虚线表示；
 * 小汽车为与SUV之间也是继承关系，它们之间的关系为泛化关系，使用带空心箭头的实线表示；
@@ -130,7 +130,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://ZQiang94.github.io/2017/05/03/README15/" data-id="cj277lxco0000dsll26ot0n2d" class="article-share-link">Share</a>
+      <a data-url="http://ZQiang94.github.io/2017/05/03/README15/" data-id="cj277lxco0000dsll26ot0n2d" class="article-share-link">分享</a>
       
       
       
@@ -141,7 +141,7 @@
 <nav id="article-nav">
   
     <a href="/2017/05/02/README14/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
+      <strong class="article-nav-caption">上一篇</strong>
       <div class="article-nav-title">
         
           HTTP协议
@@ -151,7 +151,7 @@
   
   
     <a href="/2017/05/05/README16/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
+      <strong class="article-nav-caption">下一篇</strong>
       <div class="article-nav-title">SDK目录讲解</div>
     </a>
   
@@ -183,9 +183,9 @@
     
       <div class="widget" id="toc-widget-fixed">
       
-        <strong class="toc-title">Content</strong>
+        <strong class="toc-title">文章目录</strong>
         <div class="toc-widget-list">
-              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#类图中常见的几种关系分别为："><span class="toc-number">1.</span> <span class="toc-text">类图中常见的几种关系分别为：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#泛化（Generalization）"><span class="toc-number">1.1.</span> <span class="toc-text">泛化（Generalization）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#实现（Realization）"><span class="toc-number">1.2.</span> <span class="toc-text">实现（Realization）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#关联（Assocition）"><span class="toc-number">1.3.</span> <span class="toc-text">关联（Assocition）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#聚合（Aggregation）"><span class="toc-number">1.4.</span> <span class="toc-text">聚合（Aggregation）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#组合（Composition）"><span class="toc-number">1.5.</span> <span class="toc-text">组合（Composition）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#依赖（Dependency）"><span class="toc-number">1.6.</span> <span class="toc-text">依赖（Dependency）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参考"><span class="toc-number">2.</span> <span class="toc-text">参考</span></a></li></ol>
+              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#类图中常见的几种关系分别为："><span class="toc-number">1.</span> <span class="toc-text">类图中常见的几种关系分别为：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#泛化（Generalization）"><span class="toc-number">1.1.</span> <span class="toc-text">泛化（Generalization）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#实现（Realization）"><span class="toc-number">1.2.</span> <span class="toc-text">实现（Realization）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#关联（Assocition）"><span class="toc-number">1.3.</span> <span class="toc-text">关联（Assocition）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#聚合（Aggregation）"><span class="toc-number">1.4.</span> <span class="toc-text">聚合（Aggregation）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#组合（Composition）"><span class="toc-number">1.5.</span> <span class="toc-text">组合（Composition）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#依赖（Dependency）"><span class="toc-number">1.6.</span> <span class="toc-text">依赖（Dependency）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#示例"><span class="toc-number">1.7.</span> <span class="toc-text">示例</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参考"><span class="toc-number">2.</span> <span class="toc-text">参考</span></a></li></ol>
           </div>
       </div>
     </div>
@@ -215,7 +215,7 @@
   <div class="outer">
     <div id="footer-left">
       &copy; 2016 - 2017 ZQiang94&nbsp;|&nbsp;
-      Theme by <a href="https://github.com/giscafer/hexo-theme-cafe/" target="_blank">Cafe</a>
+      主题 <a href="https://github.com/giscafer/hexo-theme-cafe/" target="_blank">Cafe</a>
     </div>
 	<div id="footer-center">
 		<span id="busuanzi_container_site_pv">
@@ -223,7 +223,7 @@
 		</span>
 	</div>
      <div id="footer-right">
-      Contact&nbsp;|&nbsp;zhangqiang452608069@gmail.com
+      联系方式&nbsp;|&nbsp;zhangqiang452608069@gmail.com
     </div>
   </div>
 </footer>
